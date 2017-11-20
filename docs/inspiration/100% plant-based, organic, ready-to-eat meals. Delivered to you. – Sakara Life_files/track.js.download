@@ -1,0 +1,15 @@
+(function () {
+    var queue = window['friendbuy'];
+    if (queue.track_callback) {
+        queue.track_callback({
+            store_host: "site-beed04dd-www.sakaralife.com",
+            embed_load_code: "20171111090014757be90951"
+        });
+    }
+
+    var uuid = '030104065650065619070652001c035152501a510003031d505051555009000001065304';
+    if (queue.set_fbuy_cookie && uuid) {
+        queue.set_fbuy_cookie(uuid);
+    }
+
+})();

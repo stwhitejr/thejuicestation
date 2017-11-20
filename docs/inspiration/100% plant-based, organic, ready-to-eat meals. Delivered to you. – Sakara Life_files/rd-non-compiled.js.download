@@ -1,0 +1,49 @@
+var Sakara = new (function () {
+	'use strict';
+
+	Sakara.prototype._setCart = function (cart) {
+		this.cart = cart;
+	};
+
+	Sakara.prototype._renderCartCount = function () {
+		var $cartCount = $('.js-cart-count');
+		
+		if (this.cart.item_count === 0) {
+			$cartCount.hide();
+		} else {
+			$cartCount.show();
+		}
+
+		$cartCount.text(this.cart.item_count);
+	};
+
+	Sakara.prototype._loadCart = function () {
+		var self = this;
+
+		return $.get('/cart.json').then(function (cart) {
+			self._setCart(cart);
+		});
+	};
+
+	/**
+	 * Whenever the cart has changed, this function should be called
+	 * indirectly by triggering the 'cart:changed' event.
+	 */
+	Sakara.prototype._cartChanged = function () {
+		var self = this;
+
+		self._loadCart().then(function () {
+			self._renderCartCount();
+		});
+	};
+
+	function Sakara() {
+		this.cart = {};
+
+		this._loadCart();
+
+		$(document).on('cart:changed', this._cartChanged.bind(this));
+	}
+
+	return Sakara;
+}());

@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^([a-zA-Z0-9]+)$ index.php?controller=pages&action=$1
+  RewriteRule ^([a-zA-Z0-9]+)/([a-zA-Z0-9]+)$ index.php?controller=$1&action=$2
+</IfModule>
