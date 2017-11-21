@@ -10,7 +10,7 @@
 <body>
   <div class="Wrap">
     <section>
-      <!-- logo here -->
+      <img src="includes/images/logo.svg" alt="The Juice Station" class="Logo" />
       <h1>Website and New Pembroke Location Coming Soon!</h1>
       <p class="Intro">
         We're happy to announce The Juice Station will be opening it's first location at

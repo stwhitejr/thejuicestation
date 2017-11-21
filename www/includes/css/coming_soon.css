@@ -51,6 +51,10 @@ ul {
 .ErrorMessage {
   color: #cf4646;
 }
+.Logo {
+  width: 300px;
+  margin: 0 0 10px;
+}
 .flex {
   display: flex;
 }
