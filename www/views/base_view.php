@@ -20,6 +20,7 @@
       </nav>
     </header>
     <?php require_once($content_view) ?>
-    <?=$footer ?>
-  <body>
-<html>
+    <footer>
+    </footer>
+  </body>
+</html>

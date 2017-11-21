@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'SinaNovaReg';
+  src: url('../fonts/SinaNovaReg-webfont.woff2') format('woff2'),
+       url('../fonts/SinaNovaReg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-size: 22px;
+  color: #4d4d4f;
+  font-weight: 300;
+}
+input, button {
+  font-family: 'Open Sans', arial, sans-serif;
+  font-size: 80%;
+  color: #4d4d4f;
+  padding: 10px;
+  border: solid 1px #c7c7c7;
+}
+emphasis {
+  font-style: normal;
+  font-weight: 400;
+}
+section {
+  margin-bottom: 20px;
+}
+h1, p {
+  margin: 0 0 10px;
+}
+h1 {
+  font-weight: normal;
+  font-family: 'SinaNovaReg', Times New Roman, serif;
+  font-size: 180%;
+}
+ul, li {
+  margin: 0;
+}
+li {
+  padding: 0;
+}
+ul {
+  padding-left: 10%;
+}
+.Wrap {
+  margin: 10px auto;
+  width: 70%;
+}
+.ErrorMessage {
+  color: #cf4646;
+}
+.flex {
+  display: flex;
+}
+.flex_col {
+  flex: 1;
+  padding: 0 10px;
+}
+@media only screen and (max-width:1200px) {
+  .Wrap {
+    width: 90%;
+  }
+}
+@media only screen and (max-device-width:600px) {
+  body {
+    font-size: 16px;
+  }
+}

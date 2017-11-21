@@ -1,0 +1,178 @@
+[21-Nov-2017 14:57:25 UTC] PHP Warning:  require_once(./dev/controllers/base_controller.php): failed to open stream: No such file or directory in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 2
+[21-Nov-2017 14:57:25 UTC] PHP Fatal error:  require_once(): Failed opening required './dev/controllers/base_controller.php' (include_path='/public_html/dev') in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 2
+[21-Nov-2017 14:57:26 UTC] PHP Warning:  require_once(./dev/controllers/base_controller.php): failed to open stream: No such file or directory in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 2
+[21-Nov-2017 14:57:26 UTC] PHP Fatal error:  require_once(): Failed opening required './dev/controllers/base_controller.php' (include_path='/public_html/dev') in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 2
+[21-Nov-2017 14:58:13 UTC] PHP Parse error:  syntax error, unexpected '$userAgent' (T_VARIABLE), expecting ',' or ')' in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 21
+[21-Nov-2017 15:00:36 UTC] PHP Parse error:  syntax error, unexpected ';' in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 18
+[21-Nov-2017 15:01:14 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 15:01:14 UTC] PHP Warning:  require_once(views/coming_soon_view.php): failed to open stream: No such file or directory in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 18
+[21-Nov-2017 15:01:14 UTC] PHP Fatal error:  require_once(): Failed opening required 'views/coming_soon_view.php' (include_path='/public_html/dev') in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 18
+[21-Nov-2017 15:02:44 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 15:03:00 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function Pages_Model() in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php:15
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#1 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#2 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 15
+[21-Nov-2017 15:04:41 UTC] PHP Parse error:  syntax error, unexpected '::' (T_PAAMAYIM_NEKUDOTAYIM) in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 15
+[21-Nov-2017 15:05:33 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Pages_Model::__construct(), 0 passed in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 14 and exactly 1 expected in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:5
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(14): Pages_Model->__construct()
+#1 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#2 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#3 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 5
+[21-Nov-2017 15:06:31 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 15:06:31 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[28000] [1045] Access denied for user 'stwhite'@'ip-160-153-77-100.ip.secureserver.net' (using password: YES) in /home/b2lranzydbx5/public_html/dev/connection.php:12
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/connection.php(12): PDO->__construct('mysql:host=160....', 'stwhite', 'Br0ken!', Array)
+#1 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(20): Db::getInstance()
+#2 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('stwhite@wayfair...')
+#3 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#4 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#5 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/connection.php on line 12
+[21-Nov-2017 15:07:52 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 15:07:52 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2005] Unknown MySQL server host 'http://www.thejuicestation.net' (2) in /home/b2lranzydbx5/public_html/dev/connection.php:12
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/connection.php(12): PDO->__construct('mysql:host=http...', 'stwhite', 'Br0ken!', Array)
+#1 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(20): Db::getInstance()
+#2 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('stwhite@wayfair...')
+#3 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#4 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#5 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/connection.php on line 12
+[21-Nov-2017 15:08:56 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 15:08:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@wayfair.com,69.46.227.226,,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKi' at line 1 in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:21
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(21): PDO->exec('INSERT INTO tbl...')
+#1 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('stwhite@wayfair...')
+#2 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#3 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#4 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 21
+[21-Nov-2017 15:09:26 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 15:09:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.227.226,,Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, l' at line 1 in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:21
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(21): PDO->exec('INSERT INTO tbl...')
+#1 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('stwhitewayfair....')
+#2 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#3 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#4 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 21
+[21-Nov-2017 15:10:26 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 15:10:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'steve' in 'field list' in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:21
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(21): PDO->exec('INSERT INTO tbl...')
+#1 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('stwhitewayfair....')
+#2 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#3 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#4 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 21
+[21-Nov-2017 15:10:26 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 15:10:26 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'steve' in 'field list' in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:21
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(21): PDO->exec('INSERT INTO tbl...')
+#1 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('stwhitewayfair....')
+#2 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#3 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#4 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 21
+[21-Nov-2017 15:10:45 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 15:11:35 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 17:03:06 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:16:42 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:22:52 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:22:52 UTC] PHP Notice:  Undefined variable: view_path in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 19
+[21-Nov-2017 17:22:52 UTC] PHP Warning:  require_once(views/coming_soon_view.php): failed to open stream: No such file or directory in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 19
+[21-Nov-2017 17:22:52 UTC] PHP Fatal error:  require_once(): Failed opening required 'views/coming_soon_view.php' (include_path='/public_html/dev') in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 19
+[21-Nov-2017 17:24:15 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:27:20 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:28:26 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:28:44 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:30:13 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:31:19 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:31:43 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:32:51 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:33:04 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'stwhite@wayfair.com' for key 'PRIMARY' in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:15
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(15): PDO->exec('INSERT INTO tbl...')
+#1 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('stwhite@wayfair...')
+#2 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#3 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#4 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 15
+[21-Nov-2017 17:34:20 UTC] PHP Notice:  Undefined index: email in /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php on line 13
+[21-Nov-2017 17:35:10 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:35:49 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:35:49 UTC] PHP Notice:  Undefined variable: signup in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 17:38:44 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:39:04 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:40:10 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:40:10 UTC] PHP Notice:  Array to string conversion in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 20
+[21-Nov-2017 17:40:27 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:40:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'blahblahkddd' for key 'PRIMARY' in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:15
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(15): PDO->exec('INSERT INTO tbl...')
+#1 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('blahblahkddd')
+#2 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#3 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#4 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 15
+[21-Nov-2017 17:40:54 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:41:58 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:45:05 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:45:05 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'blahblahkdddddd' for key 'PRIMARY' in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:15
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(15): PDO->exec('INSERT INTO tbl...')
+#1 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('blahblahkdddddd')
+#2 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#3 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#4 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 15
+[21-Nov-2017 17:45:17 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:45:29 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:47:12 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 17:47:12 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'blahblahkdddddddd' for key 'PRIMARY' in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:15
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(15): PDO->exec('INSERT INTO tbl...')
+#1 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('blahblahkdddddd...')
+#2 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#3 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#4 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 15
+[21-Nov-2017 17:52:44 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 11
+[21-Nov-2017 17:52:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'blahblahkdddddddd' for key 'PRIMARY' in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:16
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(16): PDO->exec('INSERT INTO tbl...')
+#1 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('blahblahkdddddd...')
+#2 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#3 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#4 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 17:53:27 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 11
+[21-Nov-2017 17:53:27 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'blahblahkdddddddd' for key 'PRIMARY' in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:16
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(16): PDO->exec('INSERT INTO tbl...')
+#1 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('blahblahkdddddd...')
+#2 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#3 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#4 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 17:53:28 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 11
+[21-Nov-2017 17:53:28 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'blahblahkdddddddd' for key 'PRIMARY' in /home/b2lranzydbx5/public_html/dev/models/pages_model.php:16
+Stack trace:
+#0 /home/b2lranzydbx5/public_html/dev/models/pages_model.php(16): PDO->exec('INSERT INTO tbl...')
+#1 /home/b2lranzydbx5/public_html/dev/controllers/pages_controller.php(16): Pages_Model->coming_soon_signup('blahblahkdddddd...')
+#2 /home/b2lranzydbx5/public_html/dev/index.php(26): Pages_Controller->index()
+#3 /home/b2lranzydbx5/public_html/dev/index.php(35): call(Object(Pages_Controller), 'index')
+#4 {main}
+  thrown in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 16
+[21-Nov-2017 17:57:37 UTC] PHP Notice:  Undefined index: HTTP_REFERER in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 11
+[21-Nov-2017 18:01:39 UTC] PHP Parse error:  syntax error, unexpected 'break' (T_BREAK) in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 30
+[21-Nov-2017 18:02:26 UTC] PHP Parse error:  syntax error, unexpected 'break' (T_BREAK) in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 31
+[21-Nov-2017 18:02:28 UTC] PHP Parse error:  syntax error, unexpected 'break' (T_BREAK) in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 31
+[21-Nov-2017 18:02:52 UTC] PHP Parse error:  syntax error, unexpected '$message' (T_VARIABLE) in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 18:02:53 UTC] PHP Parse error:  syntax error, unexpected '$message' (T_VARIABLE) in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 18:03:50 UTC] PHP Parse error:  syntax error, unexpected '$message' (T_VARIABLE) in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
+[21-Nov-2017 18:03:54 UTC] PHP Parse error:  syntax error, unexpected '$message' (T_VARIABLE) in /home/b2lranzydbx5/public_html/dev/models/pages_model.php on line 10
