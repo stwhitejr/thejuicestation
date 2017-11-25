@@ -28,6 +28,7 @@
 
 body {
   margin: 0;
+  background-color: #e5e8ee;
   font-family: 'Open Sans', arial, sans-serif;
   font-weight: 300;
   font-size: 22px; }
@@ -36,12 +37,13 @@ body {
       font-size: 16px; } }
 
 p, h1, h2, h3, h4 {
-  margin: 0; }
+  margin: 0;
+  font-weight: 300; }
 
 p {
   line-height: 130%; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4 {
   font-family: 'SinaNova', times new roman, serif; }
 
 h1 {
@@ -74,13 +76,21 @@ button {
   padding: 10px; }
 
 @font-face {
-  font-family: 'SinaNovaReg';
+  font-family: 'SinaNova';
   src: url("../fonts/SinaNovaReg-webfont.woff2") format("woff2"), url("../fonts/SinaNovaReg-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
+.Wrap {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff; }
+  @media only screen and (max-width: 950px) {
+    .Wrap {
+      width: 100%; } }
+
 .Header {
-  padding: 20px; }
+  padding: 20px 20px 5px; }
 
 .Logo {
   width: 20%; }
@@ -91,7 +101,7 @@ button {
   width: 80%;
   position: relative; }
   .Nav-inner {
-    bottom: 12%;
+    bottom: 6%;
     position: absolute;
     margin-left: 5%; }
   .Nav-item {
@@ -104,6 +114,10 @@ button {
       color: #fff; }
 
 .Hero {
-  background-color: #a1d782; }
+  background-color: #a1d782;
+  color: #fff;
+  min-height: 300px;
+  max-height: 800px;
+  overflow: auto; }
 
 /*# sourceMappingURL=home.css.map */

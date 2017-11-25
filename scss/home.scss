@@ -5,4 +5,7 @@
 .Hero {
   background-color: $color--green;
   color: $color--white;
+  min-height: 300px;
+  max-height: 800px;
+  overflow: auto;
 }

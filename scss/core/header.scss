@@ -1,8 +1,9 @@
 .Header {
-  padding: $spacing--medium;
+  padding: $spacing--medium $spacing--medium $spacing--xsmall;
 }
 .Logo {
   width: 20%;
+  padding-left: $spacing--small;
   &-img {
     width: 100%;
   }
@@ -11,13 +12,14 @@
   width: 80%;
   position: relative;
   &-inner {
-    bottom: 12%;
+    bottom: 6%;
     position: absolute;
     margin-left: 5%;
   }
   &-item {
     margin-left: 5px;
     padding: 5px;
+    font-size: $fontsize--large;
     &:last-child {
       margin-right: 5px;
     }
