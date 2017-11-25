@@ -1,0 +1,29 @@
+.Header {
+  padding: $spacing--medium;
+}
+.Logo {
+  width: 20%;
+  &-img {
+    width: 100%;
+  }
+}
+.Nav {
+  width: 80%;
+  position: relative;
+  &-inner {
+    bottom: 12%;
+    position: absolute;
+    margin-left: 5%;
+  }
+  &-item {
+    margin-left: 5px;
+    padding: 5px;
+    &:last-child {
+      margin-right: 5px;
+    }
+    &:hover {
+      background-color: $color--green;
+      color: $color--white;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.u-FlexBox {
+  display: flex; }
+
+.u-Col {
+  flex: 1; }
+
+.u-Block {
+  margin: 20px;
+  padding: 10px; }
+  @media only screen and (max-device-width: 600px) {
+    .u-Block {
+      margin: 10px; } }
+
+.u-Box {
+  padding: 10px; }
+
+.u-Row {
+  margin: 30px 0; }
+
+.u-Relative {
+  position: relative; }
+
+.u-InlineBlock {
+  display: inline-block; }
+
+.u-MarginLeft {
+  margin-left: 5px; }
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-weight: 300;
+  font-size: 22px; }
+  @media only screen and (max-device-width: 600px) {
+    body {
+      font-size: 16px; } }
+
+p, h1, h2, h3, h4 {
+  margin: 0; }
+
+p {
+  line-height: 130%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SinaNova', times new roman, serif; }
+
+h1 {
+  font-size: 180%; }
+
+h2 {
+  font-size: 150%; }
+
+h3 {
+  font-size: 120%; }
+
+h4 {
+  font-size: 110%; }
+
+a {
+  text-decoration: none;
+  color: #212126; }
+
+input {
+  padding: 10px;
+  border: solid 1px #878787;
+  color: #878787;
+  background-color: #e5e8ee; }
+
+button {
+  background-color: #212126;
+  border: none;
+  text-align: center;
+  color: #fff;
+  padding: 10px; }
+
+@font-face {
+  font-family: 'SinaNovaReg';
+  src: url("../fonts/SinaNovaReg-webfont.woff2") format("woff2"), url("../fonts/SinaNovaReg-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.Header {
+  padding: 20px; }
+
+.Logo {
+  width: 20%; }
+  .Logo-img {
+    width: 100%; }
+
+.Nav {
+  width: 80%;
+  position: relative; }
+  .Nav-inner {
+    bottom: 12%;
+    position: absolute;
+    margin-left: 5%; }
+  .Nav-item {
+    margin-left: 5px;
+    padding: 5px; }
+    .Nav-item:last-child {
+      margin-right: 5px; }
+    .Nav-item:hover {
+      background-color: #a1d782;
+      color: #fff; }
+
+.Hero {
+  background-color: #a1d782; }
+
+/*# sourceMappingURL=home.css.map */

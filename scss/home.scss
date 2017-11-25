@@ -1,0 +1,8 @@
+@import 'core/global';
+@import 'core/header';
+// @import 'core/footer';
+
+.Hero {
+  background-color: $color--green;
+  color: $color--white;
+}

@@ -16,9 +16,9 @@ require_once('models/pages_model.php');
       }
     }
 
-    public function about() {
-      $this->page_title = 'about';
-      $this->page = 'about';
+    public function home() {
+      // $this->page_title = 'about';
+      $this->page = 'home';
       return $this->get_view();
     }
 

@@ -27,7 +27,7 @@
   }
 
   // list of allowed controllers
-  $controllers = array('pages' => ['index', 'about', 'error']);
+  $controllers = array('pages' => ['index', 'home', 'error']);
 
   // check that the requested controller and action are both allowed
   if (array_key_exists($controller, $controllers)) {
