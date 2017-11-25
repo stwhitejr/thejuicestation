@@ -1,0 +1,113 @@
+// Color Variables
+$color--green: #a1d782;
+$color--orange: #f0a861;
+$color--dark: #212126;
+$color--medium: #878787;
+$color--light:  #e5e8ee;
+$color--base: #414246;
+$color--white: #fff;
+
+// Spacing Variables
+$spacing--xsmall: 5px;
+$spacing--small: 10px;
+$spacing--medium: 20px;
+$spacing--large: 30px;
+$spacing--mobilesmall: 5px;
+$spacing--mobilemedium: 10px;
+$spacing--mobilelarge: 20px;
+
+// Font Size Variables
+$fontsize--base: 22px;
+$fontsize--mobilebase: 16px;
+$fontsize--xsmall: 70%;
+$fontsize--small: 80%;
+$fontsize--medium: 110%;
+$fontsize--large: 120%;
+$fontsize--xlarge: 150%;
+$fontsize--xxlarge: 180%;
+
+// Misc Variables
+$bp-max-device-width: 600px;
+
+// Utility
+.u-FlexBox {
+  display: flex;
+}
+.u-Col {
+  flex: 1;
+}
+.u-Block {
+  margin: $spacing--medium;
+  padding: $spacing--small;
+  @media only screen and (max-device-width:$bp-max-device-width) {
+    margin: $spacing--mobilemedium;
+  }
+}
+.u-Box {
+  padding: $spacing--small;
+}
+.u-Row {
+  margin: $spacing--large 0;
+}
+.u-Relative {
+  position: relative;
+}
+.u-InlineBlock {
+  display: inline-block;
+}
+.u-MarginLeft {
+  margin-left: $spacing--xsmall;
+}
+
+// Resets
+body {
+  margin: 0;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-weight: 300;
+  font-size: $fontsize--base;
+  @media only screen and (max-device-width:$bp-max-device-width) {
+    font-size: $fontsize--mobilebase;
+  }
+}
+p, h1, h2, h3, h4 {
+  margin: 0;
+}
+p {
+  line-height: 130%;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'SinaNova', times new roman, serif;
+}
+h1 {
+  font-size: $fontsize--xxlarge;
+}
+h2 {
+  font-size: $fontsize--xlarge;
+}
+h3 {
+  font-size: $fontsize--large;
+}
+h4 {
+  font-size: $fontsize--medium;
+}
+input {
+  padding: $spacing--small;
+  border: solid 1px $color--medium;
+  color: $color--medium;
+  background-color: $color--light;
+}
+button {
+  background-color: $color--dark;
+  border: none;
+  text-align: center;
+  color: $color--white;
+  padding: $spacing--small;
+}
+
+@font-face {
+  font-family: 'SinaNovaReg';
+  src: url('../fonts/SinaNovaReg-webfont.woff2') format('woff2'),
+       url('../fonts/SinaNovaReg-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
