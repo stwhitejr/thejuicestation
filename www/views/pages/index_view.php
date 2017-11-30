@@ -1,1 +1,0 @@
-<p>This is my index page</p>

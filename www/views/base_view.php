@@ -28,7 +28,7 @@
         </div>
       </nav>
     </header>
-    <?php require_once($content_view) ?>
+    <?php $view->output() ?>
     <footer>
     </footer>
   </body>

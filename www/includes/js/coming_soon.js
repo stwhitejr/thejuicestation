@@ -20,7 +20,7 @@ function signUp() {
        signUpText.innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET", "/dev/index.php?email=" + emailInput, true);
+    xhttp.open("GET", "/dev/index.php?controller=pages&action=email_signup&email=" + emailInput, true);
     xhttp.send();
   }
 }

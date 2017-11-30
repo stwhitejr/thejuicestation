@@ -1,7 +1,13 @@
 <?php
   class Pages_Model {
-    public $page_data = [];
+    public $page_title = 'The Juice Station';
+    public $navigation = ['link_1', 'link_2', 'link_3'];
 
+     /**
+      * @todo
+      * You could have all the default page data load from a table
+      * you just need to pass some sort of id to this construct when you intialize
+      */
     function __construct() {
     }
 
