@@ -1,8 +1,0 @@
-// Last edit: Mon, 27 Mar 17 17:20:03 -0400
-_rfsn_tracker.load_settings({
-	version : 1.0,
-	base_url : 'https://sakaralife.refersion.com/',
-	xdomains: [],
-	verbose: false,
-	is_loaded: true
-})
