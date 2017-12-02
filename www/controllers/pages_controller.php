@@ -1,5 +1,13 @@
 <?php
-require_once('models/pages_model.php');
+  // Page Constants
+  CONST PAGE_ID_HOME             = 01;
+  CONST PAGE_ID_ABOUT            = 02;
+  CONST PAGE_ID_MENU             = 03;
+  CONST PAGE_ID_CLEANSES         = 04;
+  CONST PAGE_ID_DELIVERY_SERVICE = 05;
+  CONST PAGE_ID_LOCATION         = 06;
+
+  require_once('models/pages_model.php');
   class Pages_Controller {
 
     public $view;
@@ -13,7 +21,9 @@ require_once('models/pages_model.php');
      */
     public function home() {
       require_once('views/pages/home_view.php');
-      $this->page_model = new Pages_Model();
+      $this->page_model = new Pages_Model(PAGE_ID_HOME);
+      // $this->page_model->page_title = 'pa';
+      $this->page_model->css_files = ['home'];
       $this->view = new Home_View($this->page_model);
     }
 

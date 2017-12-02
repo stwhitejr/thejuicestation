@@ -24,12 +24,21 @@ function compileSass(file) {
   });
 }
 
-exec('git diff origin/master --name-only "scss/*.scss" ":(exclude)scss/core/*.scss"', function(err, stdout, stderr) {
-  if (!err) {
-    let filesToCompile = stdout.split('\n');
-    filesToCompile.pop();
-    filesToCompile.forEach(function(file) {
-      compileSass(file);
-    });
-  }
-});
+// exec('git diff origin/master --name-only "scss/*.scss" ":(exclude)scss/core/*.scss"', function(err, stdout, stderr) {
+//   if (!err) {
+//     let filesToCompile = stdout.split('\n');
+//     filesToCompile.pop();
+//     filesToCompile.forEach(function(file) {
+//       compileSass(file);
+//     });
+//   }
+// });
+
+fs.readdir('scss/', (function(err, response) {
+  if (err) { throw err };
+  response.forEach(function(file) {
+    if (file.indexOf('.scss') !== -1) {
+      compileSass('scss/' + file);
+    }
+  });
+}));

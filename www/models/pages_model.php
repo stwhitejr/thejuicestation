@@ -1,14 +1,27 @@
 <?php
   class Pages_Model {
+
+    // Public Variables
     public $page_title = 'The Juice Station';
-    public $navigation = ['link_1', 'link_2', 'link_3'];
+    // public $navigation = ['link_1', 'link_2', 'link_3'];
+    public $navigation = [
+      ['name' => 'home', 'url' => '/', 'id' => PAGE_ID_HOME],
+      ['name' => 'about', 'url' => 'about', 'id' => PAGE_ID_ABOUT],
+      ['name' => 'menu', 'url' => 'menu', 'id' => PAGE_ID_MENU],
+      ['name' => 'cleanses', 'url' => 'cleanses', 'id' => PAGE_ID_CLEANSES],
+      ['name' => 'delivery&nbsp;service', 'url' => 'delivery-service', 'id' => PAGE_ID_DELIVERY_SERVICE],
+      ['name' => 'location', 'url' => 'location', 'id' => PAGE_ID_LOCATION]
+    ];
+    public $css_files;
+    public $page_id;
 
      /**
       * @todo
-      * You could have all the default page data load from a table
-      * you just need to pass some sort of id to this construct when you intialize
+      * Hard code navigation above
+      * Static content for page title, css files and page id will come from controller
       */
-    function __construct() {
+    function __construct($page_id) {
+      $this->page_id = $page_id;
     }
 
     function coming_soon_signup($email) {

@@ -1,0 +1,129 @@
+.u-FlexBox {
+  display: flex; }
+
+@media only screen and (max-width: 599px) {
+  .u-NoMobileFlex {
+    display: block; }
+    .u-NoMobileFlex .u-ColMargin {
+      margin-left: 0; } }
+
+.u-Col {
+  flex: 1; }
+
+.u-Col--medium {
+  flex: 2; }
+
+.u-Col--large {
+  flex: 3; }
+
+.u-Block {
+  margin: 20px;
+  padding: 10px; }
+  @media only screen and (max-device-width: 850px) {
+    .u-Block {
+      margin: 10px; } }
+
+.u-Row--small {
+  margin-bottom: 10px; }
+
+.u-Row--medium {
+  margin-bottom: 20px; }
+
+.u-Row--large {
+  margin-bottom: 30px; }
+
+.u-Relative {
+  position: relative; }
+
+.u-InlineBlock {
+  display: inline-block; }
+
+.u-ColMargin {
+  margin-left: 20px; }
+
+.u-InnerPadding {
+  padding: 20px; }
+
+body {
+  margin: 0;
+  background-color: #e5e8ee;
+  font-family: 'Open Sans', arial, sans-serif;
+  font-weight: 300;
+  font-size: 22px; }
+  @media only screen and (max-width: 1119px) {
+    body {
+      font-size: 18px; } }
+  @media only screen and (max-width: 850px) {
+    body {
+      font-size: 16px; } }
+  @media only screen and (max-width: 600px) {
+    body {
+      font-size: 13px; } }
+
+p, h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 300; }
+
+p {
+  line-height: 130%; }
+
+h1, h2, h3, h4 {
+  font-family: 'SinaNova', times new roman, serif; }
+
+h1 {
+  font-size: 180%; }
+
+h2 {
+  font-size: 150%; }
+
+h3 {
+  font-size: 120%; }
+
+h4 {
+  font-size: 110%; }
+
+a {
+  text-decoration: none;
+  color: #212126; }
+
+input {
+  padding: 10px;
+  border: solid 1px #878787;
+  color: #878787;
+  background-color: #e5e8ee;
+  font-size: 80%;
+  outline: none; }
+
+button {
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  font-size: 100%;
+  font-weight: 300;
+  font-family: 'Open Sans', arial, sans-serif; }
+
+button[type="submit"] {
+  background-color: #212126;
+  color: #fff;
+  padding: 10px;
+  font-size: 80%; }
+
+@font-face {
+  font-family: 'SinaNova';
+  src: url("../fonts/SinaNovaReg-webfont.woff2") format("woff2"), url("../fonts/SinaNovaReg-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+.Wrap {
+  width: 95%;
+  margin: 0 auto;
+  background-color: #fff; }
+  @media only screen and (max-width: 1119px) {
+    .Wrap {
+      width: 100%; } }
+
+.Hero {
+  color: red; }
+
+/*# sourceMappingURL=index.css.map */

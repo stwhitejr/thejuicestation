@@ -1,31 +1,44 @@
 .Header {
   padding: $spacing--medium $spacing--medium $spacing--xsmall;
-}
-.Logo {
-  width: 20%;
-  padding-left: $spacing--small;
-  &-img {
-    width: 100%;
+  display: flex;
+  @media only screen and (max-width:$bp--medium) {
+    padding: $spacing--small $spacing--small $spacing--xsmall;
+    display: block;
   }
-}
-.Nav {
-  width: 80%;
-  position: relative;
-  &-inner {
-    bottom: 6%;
-    position: absolute;
-    margin-left: 5%;
-  }
-  &-item {
-    margin-left: 5px;
-    padding: 5px;
-    font-size: $fontsize--large;
-    &:last-child {
-      margin-right: 5px;
+  .Logo {
+    width: 20%;
+    padding-left: $spacing--small;
+    &-img {
+      width: 100%;
     }
-    &:hover {
-      background-color: $color--green;
-      color: $color--white;
+    @media only screen and (max-width:$bp--medium) {
+      width: 30%;
+      padding: 0;
+      margin: 0 auto $spacing--xsmall;
+    }
+  }
+  .Nav {
+    margin: 6% 0 0 auto;
+    @media only screen and (max-width:$bp--medium) {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    &-item {
+      display: inline-block;
+      margin-left: 15px;
+      padding: 5px;
+      font-size: $fontsize--large;
+      &:last-child {
+        margin-right: 5px;
+      }
+      &:hover {
+        background-color: $color--green;
+        color: $color--white;
+      }
+      @media only screen and (max-width:$bp--medium) {
+        margin-left: 5px;
+      }
     }
   }
 }

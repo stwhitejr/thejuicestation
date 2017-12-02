@@ -8,15 +8,15 @@
     }
 
     /**
-     * Header
+     * Navigation
      *
      * @return string
      */
-    public function header() {
+    public function navigation() {
       $navigation = $this->model->navigation;
-      $output;
+      $output = '';
       foreach ($navigation as $nav) {
-        $output .= '<a>' . $nav . '</a>';
+        $output .= '<a href="' . $nav["url"] . '" class="Nav-item ' . ($nav["id"] === $this->model->page_id ? "Nav-item--active" : "") . '">' . $nav["name"] . '</a>';
       }
       return $output;
     }
@@ -31,12 +31,7 @@
     }
 
     /**
-     * @todo I think a base view would come in handy here. It would take care of all
-     * the persistent stuff like header, footer, page_title, etc
-     * If you needed to tweak anything in the base view you could do so using the construct
-     * Or better yet maybe you only need a base page view. We probably don't need anything
-     * specific to the page modified here. The model should have all the unique data for
-     * the specific page since we'll be pulling from a DB with arguments
+     * @todo this can probably be converted to a generic page_view
      *
      */
 

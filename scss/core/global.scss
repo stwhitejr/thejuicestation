@@ -12,42 +12,75 @@ $spacing--xsmall: 5px;
 $spacing--small: 10px;
 $spacing--medium: 20px;
 $spacing--large: 30px;
+$spacing--xlarge: 50px;
 $spacing--mobilesmall: 5px;
 $spacing--mobilemedium: 10px;
 $spacing--mobilelarge: 20px;
 
 // Font Size Variables
 $fontsize--base: 22px;
-$fontsize--mobilebase: 16px;
+$fontsize--largebase: 18px;
+$fontsize--mediumbase: 16px;
+$fontsize--smallbase: 13px;
 $fontsize--xsmall: 70%;
 $fontsize--small: 80%;
+$fontsize--reset: 100%;
 $fontsize--medium: 110%;
 $fontsize--large: 120%;
 $fontsize--xlarge: 150%;
 $fontsize--xxlarge: 180%;
 
 // Misc Variables
-$bp-max-device-width: 600px;
+$bp--large: 1119px;
+$bp--medium: 850px;
+$bp--small: 600px;
+$bp--mobile: 599px;
+
+// Placeholders
+%button {
+  padding: $spacing--xsmall $spacing--small;
+  &:after {
+    // TODO add arrow icon
+    content:'';
+  }
+}
 
 // Utility
 .u-FlexBox {
   display: flex;
 }
+@media only screen and (max-width:$bp--mobile) {
+  .u-NoMobileFlex {
+    display: block;
+    .u-ColMargin {
+      margin-left: 0;
+    }
+  }
+}
 .u-Col {
   flex: 1;
+}
+.u-Col--medium {
+  flex: 2;
+}
+.u-Col--large {
+  flex: 3;
 }
 .u-Block {
   margin: $spacing--medium;
   padding: $spacing--small;
-  @media only screen and (max-device-width:$bp-max-device-width) {
+  @media only screen and (max-device-width:$bp--medium) {
     margin: $spacing--mobilemedium;
   }
 }
-.u-Box {
-  padding: $spacing--small;
+.u-Row--small {
+  margin-bottom: $spacing--small;
 }
-.u-Row {
-  margin: $spacing--large 0;
+.u-Row--medium {
+  margin-bottom: $spacing--medium;
+}
+.u-Row--large {
+  margin-bottom: $spacing--large;
 }
 .u-Relative {
   position: relative;
@@ -55,8 +88,11 @@ $bp-max-device-width: 600px;
 .u-InlineBlock {
   display: inline-block;
 }
-.u-MarginLeft {
-  margin-left: $spacing--xsmall;
+.u-ColMargin {
+  margin-left: $spacing--medium;
+}
+.u-InnerPadding {
+  padding: $spacing--medium;
 }
 
 // Resets
@@ -66,8 +102,14 @@ body {
   font-family: 'Open Sans', arial, sans-serif;
   font-weight: 300;
   font-size: $fontsize--base;
-  @media only screen and (max-device-width:$bp-max-device-width) {
-    font-size: $fontsize--mobilebase;
+  @media only screen and (max-width:$bp--large) {
+    font-size: $fontsize--largebase;
+  }
+  @media only screen and (max-width:$bp--medium) {
+    font-size: $fontsize--mediumbase;
+  }
+  @media only screen and (max-width:$bp--small) {
+    font-size: $fontsize--smallbase;
   }
 }
 p, h1, h2, h3, h4 {
@@ -101,13 +143,24 @@ input {
   border: solid 1px $color--medium;
   color: $color--medium;
   background-color: $color--light;
+  font-size: $fontsize--small;
+  outline: none;
 }
 button {
-  background-color: $color--dark;
   border: none;
   text-align: center;
+  cursor: pointer;
+  outline: none;
+  font-size: $fontsize--reset;
+  font-weight: 300;
+  font-family: 'Open Sans', arial, sans-serif;
+}
+// TODO move this to footer form
+button[type="submit"] {
+  background-color: $color--dark;
   color: $color--white;
   padding: $spacing--small;
+  font-size: $fontsize--small;
 }
 
 @font-face {
@@ -120,10 +173,10 @@ button {
 
 // Base
 .Wrap {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   background-color: $color--white;
-  @media only screen and (max-width:950px) {
+  @media only screen and (max-width:$bp--large) {
     width: 100%;
   }
 }
