@@ -1,12 +1,27 @@
 .Hero-cta, .MenuHero-cta, .CleanseHero-cta, .DeliveryHero-cta {
   padding: 5px 10px; }
   .Hero-cta:after, .MenuHero-cta:after, .CleanseHero-cta:after, .DeliveryHero-cta:after {
-    content: ''; }
+    content: '';
+    display: inline-block;
+    margin-left: 10px;
+    border-top: 7px solid transparent;
+    border-left: 9px solid #fff;
+    border-bottom: 7px solid transparent; }
+    @media only screen and (max-width: 1119px) {
+      .Hero-cta:after, .MenuHero-cta:after, .CleanseHero-cta:after, .DeliveryHero-cta:after {
+        border-top-width: 6px;
+        border-bottom-width: 6px;
+        border-left-width: 8px; } }
+    @media only screen and (max-width: 600px) {
+      .Hero-cta:after, .MenuHero-cta:after, .CleanseHero-cta:after, .DeliveryHero-cta:after {
+        border-top-width: 5px;
+        border-bottom-width: 5px;
+        border-left-width: 7px; } }
 
 .u-FlexBox {
   display: flex; }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 750px) {
   .u-NoMobileFlex {
     display: block; }
     .u-NoMobileFlex .u-ColMargin {
@@ -24,7 +39,7 @@
 .u-Block {
   margin: 20px;
   padding: 10px; }
-  @media only screen and (max-device-width: 850px) {
+  @media only screen and (max-device-width: 750px) {
     .u-Block {
       margin: 10px; } }
 
@@ -51,19 +66,19 @@
 
 body {
   margin: 0;
-  background-color: #e5e8ee;
-  font-family: 'Open Sans', arial, sans-serif;
+  background-color: #414246;
+  font-family: "Open Sans", arial, sans-serif;
   font-weight: 300;
   font-size: 22px; }
   @media only screen and (max-width: 1119px) {
     body {
       font-size: 18px; } }
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 750px) {
     body {
-      font-size: 16px; } }
+      font-size: 18px; } }
   @media only screen and (max-width: 600px) {
     body {
-      font-size: 13px; } }
+      font-size: 16px; } }
 
 p, h1, h2, h3, h4 {
   margin: 0;
@@ -73,19 +88,19 @@ p {
   line-height: 130%; }
 
 h1, h2, h3, h4 {
-  font-family: 'SinaNova', times new roman, serif; }
+  font-family: "SinaNova", times new roman, serif; }
 
 h1 {
-  font-size: 180%; }
+  font-size: 210%; }
 
 h2 {
-  font-size: 150%; }
+  font-size: 170%; }
 
 h3 {
-  font-size: 120%; }
+  font-size: 140%; }
 
 h4 {
-  font-size: 110%; }
+  font-size: 120%; }
 
 a {
   text-decoration: none;
@@ -97,7 +112,8 @@ input {
   color: #878787;
   background-color: #e5e8ee;
   font-size: 80%;
-  outline: none; }
+  outline: none;
+  font-family: "Open Sans", arial, sans-serif; }
 
 button {
   border: none;
@@ -106,7 +122,7 @@ button {
   outline: none;
   font-size: 100%;
   font-weight: 300;
-  font-family: 'Open Sans', arial, sans-serif; }
+  font-family: "Open Sans", arial, sans-serif; }
 
 button[type="submit"] {
   background-color: #212126;
@@ -130,8 +146,9 @@ button[type="submit"] {
 
 .Header {
   padding: 20px 20px 5px;
-  display: flex; }
-  @media only screen and (max-width: 850px) {
+  display: flex;
+  background-color: #fff; }
+  @media only screen and (max-width: 1119px) {
     .Header {
       padding: 10px 10px 5px;
       display: block; } }
@@ -140,14 +157,14 @@ button[type="submit"] {
     padding-left: 10px; }
     .Header .Logo-img {
       width: 100%; }
-    @media only screen and (max-width: 850px) {
+    @media only screen and (max-width: 1119px) {
       .Header .Logo {
         width: 30%;
         padding: 0;
         margin: 0 auto 5px; } }
   .Header .Nav {
     margin: 6% 0 0 auto; }
-    @media only screen and (max-width: 850px) {
+    @media only screen and (max-width: 1119px) {
       .Header .Nav {
         width: 100%;
         margin: 0 auto;
@@ -162,15 +179,92 @@ button[type="submit"] {
       .Header .Nav-item:hover {
         background-color: #a1d782;
         color: #fff; }
-      @media only screen and (max-width: 850px) {
+      @media only screen and (max-width: 1119px) {
         .Header .Nav-item {
           margin-left: 5px; } }
+  .Header-mobileNav {
+    display: none; }
+
+@media only screen and (max-width: 600px) {
+  .js-enabled .Header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    height: 75px;
+    padding: 0;
+    box-shadow: 0 0 12px 2px #9e9e9e; }
+    .js-enabled .Header .Logo {
+      padding: 0;
+      height: 100%;
+      margin: 0;
+      width: auto;
+      text-align: center; }
+      .js-enabled .Header .Logo img {
+        height: 75%;
+        width: auto;
+        margin-top: 10px; }
+    .js-enabled .Header .Nav {
+      transition: 1s;
+      max-height: 0;
+      overflow: hidden;
+      background-color: #fff; }
+      .js-enabled .Header .Nav--active {
+        max-height: 1000px;
+        box-shadow: 0 3px 5px #9e9e9e; }
+      .js-enabled .Header .Nav-item {
+        display: block;
+        padding: 20px;
+        border-top: solid 1px #e5e8ee;
+        margin: 0; }
+    .js-enabled .Header-mobileNav {
+      position: absolute;
+      display: block;
+      top: 10px;
+      left: 10px;
+      height: 50%;
+      cursor: pointer; }
+  .js-enabled .Content {
+    margin-top: 75px; } }
+
+.LocationHero {
+  padding: 50px 30px;
+  text-align: center;
+  border-top: solid 10px #414246; }
+  @media only screen and (max-width: 600px) {
+    .LocationHero {
+      padding: 20px; } }
+  .LocationHero-contentBox {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+    display: flex; }
+    @media only screen and (max-width: 1119px) {
+      .LocationHero-contentBox {
+        width: 100%; } }
+    @media only screen and (max-width: 750px) {
+      .LocationHero-contentBox {
+        display: block; } }
+  .LocationHero-innerBox {
+    flex: 1; }
+    .LocationHero-innerBox:nth-child(2) {
+      border-left: solid 2px #e5e8ee;
+      border-right: solid 2px #e5e8ee;
+      padding: 0 20px;
+      margin: 0 10px; }
+    @media only screen and (max-width: 750px) {
+      .LocationHero-innerBox:nth-child(2) {
+        border: 0;
+        padding: 20px 0;
+        margin: 0; } }
+  .LocationHero-innerHeader {
+    color: #a1d782; }
 
 .Footer {
   background-color: #414246;
   color: #e5e8ee;
   padding: 30px; }
-  @media only screen and (max-width: 599px) {
+  @media only screen and (max-width: 600px) {
     .Footer {
       padding: 10px; } }
   .Footer-header {
@@ -184,16 +278,15 @@ button[type="submit"] {
     border-top: solid 1px #878787;
     border-bottom: solid 1px #878787; }
   .Footer .Nav-item {
-    margin-left: 20px;
+    margin: 0 5px;
     color: #e5e8ee;
-    padding: 5px; }
+    padding: 5px;
+    display: inline-block; }
     .Footer .Nav-item:hover {
       background-color: #e5e8ee;
       color: #414246; }
   .Footer-close {
     text-align: center;
-    font-size: 80%; }
-  .Footer-copyright {
     font-size: 70%; }
 
 .Hero {
@@ -210,7 +303,7 @@ button[type="submit"] {
     width: 100%;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.2); }
-  @media only screen and (max-width: 599px) {
+  @media only screen and (max-width: 600px) {
     .Hero {
       min-height: auto; } }
   .Hero-contentBox {
@@ -223,28 +316,39 @@ button[type="submit"] {
     display: inline-block;
     position: relative;
     z-index: 2; }
-    @media only screen and (max-width: 599px) {
+    @media only screen and (max-width: 600px) {
       .Hero-contentBox {
         max-width: 100%;
         background: rgba(161, 215, 130, 0.8); } }
   .Hero-cta {
     background-color: #fff;
     color: #a1d782; }
+    .Hero-cta:after {
+      border-left-color: #a1d782; }
 
 .MenuHero {
-  padding: 30px;
-  margin: 50px 0;
+  padding: 50px 30px;
   text-align: center; }
+  @media only screen and (max-width: 600px) {
+    .MenuHero {
+      padding: 30px 20px; } }
   .MenuHero-contentBox {
     padding: 50px 0;
     max-width: 50%;
-    margin: 0 auto; }
-    @media only screen and (max-width: 599px) {
+    margin: 0 auto;
+    display: flex; }
+    @media only screen and (max-width: 750px) {
       .MenuHero-contentBox {
         max-width: 100%;
-        padding: 10px; } }
+        padding: 20px 0; } }
     .MenuHero-contentBox img {
       width: 80%; }
+  .MenuHero-contentCol {
+    flex: 1;
+    padding: 20px; }
+    @media only screen and (max-width: 600px) {
+      .MenuHero-contentCol {
+        padding: 20px 10px; } }
   .MenuHero-cta {
     background-color: #414246;
     color: #fff; }
@@ -254,6 +358,9 @@ button[type="submit"] {
   padding: 20px;
   background-color: #f0a861;
   position: relative; }
+  @media only screen and (max-width: 600px) {
+    .CleanseHero {
+      margin: 0; } }
   .CleanseHero-contentBox {
     padding: 20px;
     color: #fff;
@@ -261,30 +368,30 @@ button[type="submit"] {
     position: relative;
     z-index: 2;
     background-color: rgba(240, 168, 97, 0.8); }
-    @media only screen and (max-width: 599px) {
+    @media only screen and (max-width: 600px) {
       .CleanseHero-contentBox {
         max-width: 100%; } }
   .CleanseHero-cta {
     background-color: #fff;
     color: #f0a861; }
+    .CleanseHero-cta:after {
+      border-left-color: #f0a861; }
   .CleanseHero-decor {
     position: absolute;
     right: 0;
     top: -30px;
     z-index: 1; }
-    @media only screen and (max-width: 599px) {
+    @media only screen and (max-width: 600px) {
       .CleanseHero-decor {
-        top: -23%; } }
+        top: auto;
+        bottom: -5%; } }
     .CleanseHero-decor img {
       width: 100%; }
-      @media only screen and (max-width: 599px) {
-        .CleanseHero-decor img {
-          width: 90%; } }
 
 .DeliveryHero {
   padding: 50px 0;
   display: flex; }
-  @media only screen and (max-width: 599px) {
+  @media only screen and (max-width: 600px) {
     .DeliveryHero {
       display: block; } }
   .DeliveryHero-decor {
@@ -294,7 +401,7 @@ button[type="submit"] {
   .DeliveryHero-contentBox {
     flex: 1;
     padding: 0 30px; }
-    @media only screen and (max-width: 599px) {
+    @media only screen and (max-width: 600px) {
       .DeliveryHero-contentBox {
         padding-top: 30px; } }
   .DeliveryHero-cta {

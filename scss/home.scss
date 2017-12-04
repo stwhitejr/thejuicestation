@@ -17,7 +17,7 @@
     z-index: 1;
     background-color: rgba($color--white, .2);
   }
-  @media only screen and (max-width:$bp--mobile) {
+  @media only screen and (max-width:$bp--small) {
     min-height: auto;
   }
   &-contentBox {
@@ -30,7 +30,7 @@
     display: inline-block;
     position: relative;
     z-index: 2;
-    @media only screen and (max-width:$bp--mobile) {
+    @media only screen and (max-width:$bp--small) {
       max-width: 100%;
       background: rgba($color--green, .8);
     }
@@ -39,22 +39,35 @@
     @extend %button;
     background-color: $color--white;
     color: $color--green;
+    &:after {
+      border-left-color: $color--green;
+    }
   }
 }
 .MenuHero {
-  padding: $spacing--large;
-  margin: $spacing--xlarge 0;
+  padding: $spacing--xlarge $spacing--large;
   text-align: center;
+  @media only screen and (max-width:$bp--small) {
+    padding: $spacing--large $spacing--medium;
+  }
   &-contentBox {
     padding: $spacing--xlarge 0;
     max-width: 50%;
     margin: 0 auto;
-    @media only screen and (max-width:$bp--mobile) {
+    display: flex;
+    @media only screen and (max-width:$bp--medium) {
       max-width: 100%;
-      padding: $spacing--small;
+      padding: $spacing--medium 0;
     }
     img {
       width: 80%;
+    }
+  }
+  &-contentCol {
+    flex: 1;
+    padding: $spacing--medium;
+    @media only screen and (max-width:$bp--small) {
+      padding: $spacing--medium $spacing--small;
     }
   }
   &-cta {
@@ -68,6 +81,9 @@
   padding: $spacing--medium;
   background-color: $color--orange;
   position: relative;
+  @media only screen and (max-width:$bp--small) {
+    margin: 0;
+  }
   &-contentBox {
     padding: $spacing--medium;
     color: $color--white;
@@ -75,7 +91,7 @@
     position: relative;
     z-index: 2;
     background-color: rgba($color--orange, .8);
-    @media only screen and (max-width:$bp--mobile) {
+    @media only screen and (max-width:$bp--small) {
       max-width: 100%;
     }
   }
@@ -83,27 +99,28 @@
     @extend %button;
     background-color: $color--white;
     color: $color--orange;
+    &:after {
+      border-left-color: $color--orange;
+    }
   }
   &-decor {
     position: absolute;
     right: 0;
     top: -$spacing--large;
     z-index: 1;
-    @media only screen and (max-width:$bp--mobile) {
-      top: -23%;
+    @media only screen and (max-width:$bp--small) {
+      top: auto;
+      bottom: -5%;
     }
     img {
       width: 100%;
-      @media only screen and (max-width:$bp--mobile) {
-        width: 90%;
-      }
     }
   }
 }
 .DeliveryHero {
   padding: $spacing--xlarge 0;
   display: flex;
-  @media only screen and (max-width:$bp--mobile) {
+  @media only screen and (max-width:$bp--small) {
     display: block;
   }
   &-decor {
@@ -115,7 +132,7 @@
   &-contentBox {
     flex: 1;
     padding: 0 $spacing--large;
-    @media only screen and (max-width:$bp--mobile) {
+    @media only screen and (max-width:$bp--small) {
       padding-top: $spacing--large;
     }
   }

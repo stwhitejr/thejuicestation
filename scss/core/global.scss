@@ -20,28 +20,45 @@ $spacing--mobilelarge: 20px;
 // Font Size Variables
 $fontsize--base: 22px;
 $fontsize--largebase: 18px;
-$fontsize--mediumbase: 16px;
-$fontsize--smallbase: 13px;
+$fontsize--mediumbase: 18px;
+$fontsize--smallbase: 16px;
 $fontsize--xsmall: 70%;
 $fontsize--small: 80%;
 $fontsize--reset: 100%;
-$fontsize--medium: 110%;
-$fontsize--large: 120%;
-$fontsize--xlarge: 150%;
-$fontsize--xxlarge: 180%;
+$fontsize--medium: 120%;
+$fontsize--large: 140%;
+$fontsize--xlarge: 170%;
+$fontsize--xxlarge: 210%;
 
-// Misc Variables
+// Font Family Variables
+$font--base: 'Open Sans', arial, sans-serif;
+$font--primary: 'SinaNova', times new roman, serif;
+
+// Breakpoint Variables
 $bp--large: 1119px;
-$bp--medium: 850px;
+$bp--medium: 750px;
 $bp--small: 600px;
-$bp--mobile: 599px;
 
 // Placeholders
 %button {
   padding: $spacing--xsmall $spacing--small;
   &:after {
-    // TODO add arrow icon
     content:'';
+    display: inline-block;
+    margin-left: 10px;
+    border-top: 7px solid transparent;
+    border-left: 9px solid $color--white;
+    border-bottom: 7px solid transparent;
+    @media only screen and (max-width:$bp--large) {
+      border-top-width: 6px;
+      border-bottom-width: 6px;
+      border-left-width: 8px;
+    }
+    @media only screen and (max-width:$bp--small) {
+      border-top-width: 5px;
+      border-bottom-width: 5px;
+      border-left-width: 7px;
+    }
   }
 }
 
@@ -49,7 +66,7 @@ $bp--mobile: 599px;
 .u-FlexBox {
   display: flex;
 }
-@media only screen and (max-width:$bp--mobile) {
+@media only screen and (max-width:$bp--medium) {
   .u-NoMobileFlex {
     display: block;
     .u-ColMargin {
@@ -98,8 +115,8 @@ $bp--mobile: 599px;
 // Resets
 body {
   margin: 0;
-  background-color: $color--light;
-  font-family: 'Open Sans', arial, sans-serif;
+  background-color: $color--base;
+  font-family: $font--base;
   font-weight: 300;
   font-size: $fontsize--base;
   @media only screen and (max-width:$bp--large) {
@@ -120,7 +137,7 @@ p {
   line-height: 130%;
 }
 h1, h2, h3, h4 {
-  font-family: 'SinaNova', times new roman, serif;
+  font-family: $font--primary;
 }
 h1 {
   font-size: $fontsize--xxlarge;
@@ -145,6 +162,7 @@ input {
   background-color: $color--light;
   font-size: $fontsize--small;
   outline: none;
+  font-family: $font--base;
 }
 button {
   border: none;
@@ -153,7 +171,7 @@ button {
   outline: none;
   font-size: $fontsize--reset;
   font-weight: 300;
-  font-family: 'Open Sans', arial, sans-serif;
+  font-family: $font--base;
 }
 // TODO move this to footer form
 button[type="submit"] {

@@ -10,7 +10,7 @@
       ['name' => 'menu', 'url' => 'menu', 'id' => PAGE_ID_MENU],
       ['name' => 'cleanses', 'url' => 'cleanses', 'id' => PAGE_ID_CLEANSES],
       ['name' => 'delivery&nbsp;service', 'url' => 'delivery-service', 'id' => PAGE_ID_DELIVERY_SERVICE],
-      ['name' => 'location', 'url' => 'location', 'id' => PAGE_ID_LOCATION]
+      ['name' => 'location', 'url' => '#location', 'id' => PAGE_ID_LOCATION]
     ];
     public $css_files;
     public $page_id;

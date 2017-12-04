@@ -1,8 +1,49 @@
+.LocationHero {
+  padding: $spacing--xlarge $spacing--large;
+  text-align: center;
+  border-top: solid 10px $color--base;
+  @media only screen and (max-width:$bp--small) {
+    padding: $spacing--medium;
+  }
+  &-contentBox {
+    width: 80%;
+    margin: 0 auto;
+    padding: $spacing--large 0;
+    display: flex;
+    @media only screen and (max-width:$bp--large) {
+      width: 100%;
+    }
+    @media only screen and (max-width:$bp--medium) {
+      display: block;
+    }
+  }
+  &-innerBox {
+    flex: 1;
+    &:nth-child(2) {
+      border-left: solid 2px $color--light;
+      border-right: solid 2px $color--light;
+      padding: 0 $spacing--medium;
+      margin: 0 $spacing--small;
+    }
+    @media only screen and (max-width:$bp--medium) {
+      &:nth-child(2) {
+        border: 0;
+        padding: $spacing--medium 0;
+        margin: 0;
+      }
+    }
+  }
+  &-innerHeader {
+    color: $color--green;
+  }
+  &-decor {
+  }
+}
 .Footer {
   background-color: $color--base;
   color: $color--light;
   padding: $spacing--large;
-  @media only screen and (max-width:$bp--mobile) {
+  @media only screen and (max-width:$bp--small) {
     padding: $spacing--small;
   }
   &-header {
@@ -19,9 +60,10 @@
     border-bottom: solid 1px $color--medium;
   }
   .Nav-item {
-    margin-left: 20px;
+    margin: 0 5px;
     color: $color--light;
     padding: 5px;
+    display: inline-block;
     &:hover {
       background-color: $color--light;
       color: $color--base;
@@ -29,9 +71,6 @@
   }
   &-close {
     text-align: center;
-    font-size: $fontsize--small;
-  }
-  &-copyright {
     font-size: $fontsize--xsmall;
   }
 }

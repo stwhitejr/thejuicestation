@@ -5,7 +5,7 @@
     ini_set('display_errors', 1);
     $is_dev = true;
     // if ($_GET['compile_sass'] = true) {
-      var_dump(shell_exec('cd ../ && npm run sass 2>&1'));
+      shell_exec('cd ../ && npm run sass');
     // }
   } else {
     set_include_path('/public_html/dev');
@@ -70,9 +70,10 @@
             <div class="Logo">
               <img src="includes/images/logo.svg" alt="The Juice Station" class="Logo-img" />
             </div>
-            <nav class="Nav">
+            <nav class="Nav" id="js-nav">
               <?=$view->navigation()?>
             </nav>
+            <img src="includes/images/home/mobilenav.svg" class="Header-mobileNav" id="js-mobile-nav" />
           </header>
           <div class="Content">
             <section class="Hero">
@@ -88,20 +89,20 @@
               <h1 class="MenuHero-header">
                 the simpliest of ingredients
               </h1>
-              <div class="MenuHero-contentBox u-FlexBox">
-                <div class="u-Col u-InnerPadding">
+              <div class="MenuHero-contentBox">
+                <div class="MenuHero-contentCol">
                   <img src="includes/images/home/spinach_vert.svg" />
                   <p>item</p>
                 </div>
-                <div class="u-Col u-InnerPadding">
+                <div class="MenuHero-contentCol">
                   <img src="includes/images/home/spinach_vert.svg" />
                   <p>item</p>
                 </div>
-                <div class="u-Col u-InnerPadding">
+                <div class="MenuHero-contentCol">
                   <img src="includes/images/home/spinach_vert.svg" />
                   <p>item</p>
                 </div>
-                <div class="u-Col u-InnerPadding">
+                <div class="MenuHero-contentCol">
                   <img src="includes/images/home/spinach_vert.svg" />
                   <p>item</p>
                 </div>
@@ -136,6 +137,41 @@
                 <button class="DeliveryHero-cta">learn more</button>
               </div>
             </section>
+            <section class="LocationHero" id="Location">
+              <h1 class="LocationHero-header">
+                our location
+              </h1>
+              <div class="LocationHero-contentBox">
+                <div class="LocationHero-innerBox">
+                  <h4 class="LocationHero-innerHeader">
+                    address:
+                  </h4>
+                  <p>
+                    801 Washington St<br/>
+                    Pembroke, MA 02359
+                  </p>
+                </div>
+                <div class="LocationHero-innerBox">
+                  <h4 class="LocationHero-innerHeader">
+                    email:
+                  </h4>
+                  <p>
+                    myjuicestation@gmail.com
+                  </p>
+                </div>
+                <div class="LocationHero-innerBox">
+                  <h4 class="LocationHero-innerHeader">
+                    phone:
+                  </h4>
+                  <p>
+                    1-800-juice
+                  </p>
+                </div>
+              </div>
+              <div class="LocationHero-decor">
+                <div style="width:100%; background-color:#ccc; height:300px;"></div>
+              </div>
+            </section>
           </div>
           <footer class="Footer">
             <div class="u-FlexBox u-NoMobileFlex">
@@ -152,7 +188,7 @@
                 </form>
               </section>
               <section class="u-Col u-ColMargin u-InnerPadding">
-                <div class="u-FlexBox">
+                <div class="u-FlexBox u-NoMobileFlex">
                   <div class="u-Col">
                     <h2 class="Footer-header">
                       follow us!
@@ -173,15 +209,11 @@
               <?=$view->navigation()?>
             </section>
             <section class="Footer-close u-InnerPaddings">
-              <p class="u-Row--small">
-                801 Washington St
-              </p>
-              <p class="Footer-copyright">
-                Copyright
-              </p>
+              Copyright 2018 The Juice Station
             </section>
           </footer>
         </div>
+        <script type="text/javascript" src="includes/js/global.js"></script>
       </body>
     </html>
 <?php
