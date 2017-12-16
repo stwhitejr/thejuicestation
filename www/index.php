@@ -4,12 +4,11 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
     $is_dev = true;
-    // if ($_GET['compile_sass'] = true) {
-      shell_exec('cd ../ && npm run sass');
-    // }
+  //   // Compile sass
+    shell_exec('cd ../ && npm run sass');
   } else {
-    set_include_path('/public_html/dev');
     $is_dev = false;
+    $is_prod = $_GET['prod'];
   }
   require_once('connection.php');
   require_once('helpers.php');
@@ -49,7 +48,7 @@
 
   // Only return the base HTML if this isn't an ajax request
   if (!$controller->ajax_content) {
-    if (!$is_dev) {
+    if (!$is_dev && !$is_prod) {
       require_once('coming_soon.php');
     } else {
 ?>
@@ -57,16 +56,18 @@
     <html lang="en">
       <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=400, initial-scale=1.0">
         <title>
           <?=$view->page_title()?>
         </title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
-        <link href="includes/css/home.css" type="text/css" rel="stylesheet" />
+        <?php foreach ($view->css_files() as $css_file) {?>
+          <link href="includes/css/<?=$css_file?>.css" type="text/css" rel="stylesheet" />
+        <?php } ?>
       </head>
       <body>
         <div class="Wrap">
-          <header class="Header">
+          <header class="Header" id="js-header">
             <div class="Logo">
               <img src="includes/images/logo.svg" alt="The Juice Station" class="Logo-img" />
             </div>
@@ -76,68 +77,8 @@
             <img src="includes/images/home/mobilenav.svg" class="Header-mobileNav" id="js-mobile-nav" />
           </header>
           <div class="Content">
-            <section class="Hero">
-              <div class="Hero-contentBox">
-                <h1 class="Hero-header">this is my header</h1>
-                <p class="Hero-copy u-Row--small">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, nunc eu commodo pellentesque, nunc ipsum rutrum massa, ac dictum augue orci et lorem. Donec volutpat, justo non convallis facilisis, velit dolor molestie quam, ut maximus dolor est sed nisl. Curabitur non ornare velit.
-                </p>
-                <button class="Hero-cta">this is my cta</button>
-              </div>
-            </section>
-            <section class="MenuHero">
-              <h1 class="MenuHero-header">
-                the simpliest of ingredients
-              </h1>
-              <div class="MenuHero-contentBox">
-                <div class="MenuHero-contentCol">
-                  <img src="includes/images/home/spinach_vert.svg" />
-                  <p>item</p>
-                </div>
-                <div class="MenuHero-contentCol">
-                  <img src="includes/images/home/spinach_vert.svg" />
-                  <p>item</p>
-                </div>
-                <div class="MenuHero-contentCol">
-                  <img src="includes/images/home/spinach_vert.svg" />
-                  <p>item</p>
-                </div>
-                <div class="MenuHero-contentCol">
-                  <img src="includes/images/home/spinach_vert.svg" />
-                  <p>item</p>
-                </div>
-              </div>
-              <button class="MenuHero-cta">view menu</button>
-            </section>
-            <section class="CleanseHero">
-              <div class="CleanseHero-contentBox">
-                <h1 class="CleanseHero-header">
-                  cleanses
-                </h1>
-                <p class="CleanseHero-copy u-Row--medium">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, nunc eu commodo pellentesque, nunc ipsum rutrum massa, ac dictum augue orci et lorem. Donec volutpat, justo non convallis facilisis, velit dolor molestie quam, ut maximus dolor est sed nisl. Curabitur non ornare velit.
-                </p>
-                <button class="CleanseHero-cta">learn more</button>
-              </div>
-              <div class="CleanseHero-decor">
-                <img src="includes/images/home/lemon.svg" />
-              </div>
-            </section>
-            <section class="DeliveryHero">
-              <div class="DeliveryHero-decor">
-                <img src="includes/images/home/delivery.jpg" />
-              </div>
-              <div class="DeliveryHero-contentBox">
-                <h1 class="DeliveryHero-header">
-                  deliveries
-                </h1>
-                <p class="DeliveryHero-copy u-Row--medium">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, nunc eu commodo pellentesque, nunc ipsum rutrum massa, ac dictum augue orci et lorem. Donec volutpat, justo non convallis facilisis, velit dolor molestie quam, ut maximus dolor est sed nisl. Curabitur non ornare velit.
-                </p>
-                <button class="DeliveryHero-cta">learn more</button>
-              </div>
-            </section>
-            <section class="LocationHero" id="Location">
+            <?=$view->content() ?>
+            <section class="LocationHero" id="location">
               <h1 class="LocationHero-header">
                 our location
               </h1>
@@ -147,7 +88,7 @@
                     address:
                   </h4>
                   <p>
-                    801 Washington St<br/>
+                    808 Washington St<br/>
                     Pembroke, MA 02359
                   </p>
                 </div>
@@ -164,12 +105,12 @@
                     phone:
                   </h4>
                   <p>
-                    1-800-juice
+                    1-474-866-2363
                   </p>
                 </div>
               </div>
               <div class="LocationHero-decor">
-                <div style="width:100%; background-color:#ccc; height:300px;"></div>
+                <!-- image -->
               </div>
             </section>
           </div>
@@ -179,16 +120,16 @@
                 <h2 class="Footer-header">
                   sign up for our newsletter
                 </h2>
-                <p class="Footer-copy">
+                <p class="Footer-copy" id="js-email-signup-text">
                   Get updates on events, coupons, and more!
                 </p>
                 <form class="u-FlexBox">
-                  <input type="text" name="email_signup" placeholder="Enter your email address" class="Footer-emailSignup u-Col--large" />
-                  <button type="submit" class="Footer-emailSubmit u-Col">sign up</button>
+                  <input type="text" name="email" placeholder="Enter your email address" class="Footer-emailSignup u-Col--large" id="js-email-signup-field" />
+                  <button type="submit" class="Footer-emailSubmit u-Col" id="js-email-signup">sign up</button>
                 </form>
               </section>
               <section class="u-Col u-ColMargin u-InnerPadding">
-                <div class="u-FlexBox u-NoMobileFlex">
+                <div class="u-FlexBox">
                   <div class="u-Col">
                     <h2 class="Footer-header">
                       follow us!
@@ -196,11 +137,11 @@
                     <p class="Footer-copy">
                       @thejuicestationma
                     </p>
-                    <a href="facebook url"><img src="images/facebook_logo.png" /></a>
-                    <a href="instagram url"><img src="images/instagram_logo.png" /></a>
+                    <a href="http://www.facebook.com/thejuicestationma" target="_blank"><img src="includes/images/facebook.svg" class="Footer-socialIcon" /></a>
+                    <a href="https://www.instagram.com/thejuicestationma/" target="_blank"><img src="includes/images/instagram.svg" class="Footer-socialIcon" /></a>
                   </div>
-                  <div class="u-Col u-ColMargin">
-                    images
+                  <div class="u-Col--medium u-ColMargin">
+                    <a href="https://www.instagram.com/thejuicestationma/" target="_blank"><img src="includes/images/instagram_temp.jpg" class="Footer-instagramThumb" /></a>
                   </div>
                 </div>
               </section>

@@ -6,6 +6,8 @@ $color--medium: #878787;
 $color--light:  #e5e8ee;
 $color--base: #414246;
 $color--white: #fff;
+$color--red: #95374c;
+$color--pink: #e46894;
 
 // Spacing Variables
 $spacing--xsmall: 5px;
@@ -42,6 +44,13 @@ $bp--small: 600px;
 // Placeholders
 %button {
   padding: $spacing--xsmall $spacing--small;
+  display: inline-block;
+  text-align: center;
+  opacity: .8;
+  transition: .2s;
+  @media only screen and (max-width:$bp--small) {
+    opacity: 1;
+  }
   &:after {
     content:'';
     display: inline-block;
@@ -60,6 +69,19 @@ $bp--small: 600px;
       border-left-width: 7px;
     }
   }
+  &:hover {
+    opacity: 1;
+  }
+}
+%circlebox {
+  width: 550px;
+  border-radius: 100%;
+  @media only screen and (max-width:$bp--large) {
+    width: 470px;
+  }
+  @media only screen and (max-width:$bp--small) {
+    width: 400px;
+  }
 }
 
 // Utility
@@ -69,7 +91,7 @@ $bp--small: 600px;
 @media only screen and (max-width:$bp--medium) {
   .u-NoMobileFlex {
     display: block;
-    .u-ColMargin {
+    & > .u-ColMargin {
       margin-left: 0;
     }
   }
@@ -99,6 +121,9 @@ $bp--small: 600px;
 .u-Row--large {
   margin-bottom: $spacing--large;
 }
+.u-Row--xlarge {
+  margin-bottom: $spacing--xlarge;
+}
 .u-Relative {
   position: relative;
 }
@@ -110,6 +135,9 @@ $bp--small: 600px;
 }
 .u-InnerPadding {
   padding: $spacing--medium;
+}
+.u-ErrorMessage {
+  color: $color--red;
 }
 
 // Resets

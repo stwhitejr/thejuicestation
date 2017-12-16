@@ -4,7 +4,7 @@
 @media only screen and (max-width: 750px) {
   .u-NoMobileFlex {
     display: block; }
-    .u-NoMobileFlex .u-ColMargin {
+    .u-NoMobileFlex > .u-ColMargin {
       margin-left: 0; } }
 
 .u-Col {
@@ -32,6 +32,9 @@
 .u-Row--large {
   margin-bottom: 30px; }
 
+.u-Row--xlarge {
+  margin-bottom: 50px; }
+
 .u-Relative {
   position: relative; }
 
@@ -43,6 +46,9 @@
 
 .u-InnerPadding {
   padding: 20px; }
+
+.u-ErrorMessage {
+  color: #95374c; }
 
 body {
   margin: 0;

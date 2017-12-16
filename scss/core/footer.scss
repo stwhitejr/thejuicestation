@@ -1,7 +1,7 @@
 .LocationHero {
   padding: $spacing--xlarge $spacing--large;
   text-align: center;
-  border-top: solid 10px $color--base;
+  border-top: solid 30px $color--base;
   @media only screen and (max-width:$bp--small) {
     padding: $spacing--medium;
   }
@@ -35,6 +35,7 @@
   }
   &-innerHeader {
     color: $color--green;
+    margin-bottom: $spacing--small;
   }
   &-decor {
   }
@@ -68,6 +69,16 @@
       background-color: $color--light;
       color: $color--base;
     }
+  }
+  &-socialIcon {
+    width: 50px;
+    &:last-child {
+      margin-left: $spacing--xsmall;
+    }
+  }
+  &-instagramThumb {
+    width: 100%;
+    max-width: 200px;
   }
   &-close {
     text-align: center;
