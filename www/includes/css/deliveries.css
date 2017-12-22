@@ -1,13 +1,13 @@
-.Hero-cta, .MenuHero-cta, .CleanseHero-cta, .DeliveryHero-cta {
+.Hero-cta {
   padding: 5px 10px;
   display: inline-block;
   text-align: center;
   opacity: .8;
   transition: .2s; }
   @media only screen and (max-width: 600px) {
-    .Hero-cta, .MenuHero-cta, .CleanseHero-cta, .DeliveryHero-cta {
+    .Hero-cta {
       opacity: 1; } }
-  .Hero-cta:after, .MenuHero-cta:after, .CleanseHero-cta:after, .DeliveryHero-cta:after {
+  .Hero-cta:after {
     content: '';
     display: inline-block;
     margin-left: 10px;
@@ -15,26 +15,26 @@
     border-left: 9px solid #fff;
     border-bottom: 7px solid transparent; }
     @media only screen and (max-width: 1119px) {
-      .Hero-cta:after, .MenuHero-cta:after, .CleanseHero-cta:after, .DeliveryHero-cta:after {
+      .Hero-cta:after {
         border-top-width: 6px;
         border-bottom-width: 6px;
         border-left-width: 8px; } }
     @media only screen and (max-width: 600px) {
-      .Hero-cta:after, .MenuHero-cta:after, .CleanseHero-cta:after, .DeliveryHero-cta:after {
+      .Hero-cta:after {
         border-top-width: 5px;
         border-bottom-width: 5px;
         border-left-width: 7px; } }
-  .Hero-cta:hover, .MenuHero-cta:hover, .CleanseHero-cta:hover, .DeliveryHero-cta:hover {
+  .Hero-cta:hover {
     opacity: 1; }
 
-.Hero-contentBox, .DeliveryHero-contentBox {
+.Hero-contentBox {
   width: 550px;
   border-radius: 100%; }
   @media only screen and (max-width: 1119px) {
-    .Hero-contentBox, .DeliveryHero-contentBox {
+    .Hero-contentBox {
       width: 470px; } }
   @media only screen and (max-width: 600px) {
-    .Hero-contentBox, .DeliveryHero-contentBox {
+    .Hero-contentBox {
       width: 400px; } }
 
 .u-FlexBox {
@@ -326,7 +326,6 @@ button[type="submit"] {
 
 .Hero {
   min-height: 440px;
-  background: url("../images/home/hero.jpg") bottom center;
   background-size: cover;
   position: relative;
   padding: 20px 0; }
@@ -356,85 +355,5 @@ button[type="submit"] {
     padding: 20% 5%;
     color: #fff;
     text-align: center; }
-  .Hero-cta {
-    background-color: #fff;
-    color: #e46894; }
-    .Hero-cta:after {
-      border-left-color: #e46894; }
 
-.MenuHero {
-  padding: 50px 30px;
-  text-align: center;
-  background: url("../images/home/tan_texture.svg") repeat #f4f0e7; }
-  @media only screen and (max-width: 600px) {
-    .MenuHero {
-      padding: 30px 20px; } }
-  .MenuHero-contentBox {
-    max-width: 60%;
-    margin: 0 auto; }
-    @media only screen and (max-width: 1119px) {
-      .MenuHero-contentBox {
-        max-width: 90%; } }
-    .MenuHero-contentBox img {
-      width: 100%; }
-  .MenuHero-row {
-    padding-bottom: 50px; }
-    @media only screen and (max-width: 600px) {
-      .MenuHero-row {
-        padding-bottom: 25px; } }
-  .MenuHero-cta {
-    background-color: #414246;
-    color: #fff; }
-
-.CleanseHero {
-  margin: 70px 0;
-  padding: 20px;
-  display: flex;
-  align-items: center; }
-  @media only screen and (max-width: 750px) {
-    .CleanseHero {
-      margin: 40px 0 50px; } }
-  @media only screen and (max-width: 600px) {
-    .CleanseHero {
-      display: block; } }
-  .CleanseHero-contentBox {
-    padding: 0 50px;
-    flex: 1; }
-    @media only screen and (max-width: 1119px) {
-      .CleanseHero-contentBox {
-        padding: 20px; } }
-    @media only screen and (max-width: 750px) {
-      .CleanseHero-contentBox {
-        flex: 2; } }
-  .CleanseHero-cta {
-    background-color: #f0a861;
-    color: #fff; }
-  .CleanseHero-decor {
-    flex: 2; }
-    @media only screen and (max-width: 750px) {
-      .CleanseHero-decor {
-        flex: 1; } }
-    .CleanseHero-decor img {
-      width: 100%; }
-
-.DeliveryHero {
-  padding: 50px 0;
-  background: url("../images/home/delivery.jpg") no-repeat center;
-  background-size: cover; }
-  .DeliveryHero-contentBox {
-    margin: 0 5% 0 auto;
-    background-color: rgba(161, 215, 130, 0.9); }
-    @media only screen and (max-width: 600px) {
-      .DeliveryHero-contentBox {
-        margin: 0 auto; } }
-  .DeliveryHero-innerContentBox {
-    padding: 25% 5%;
-    color: #fff;
-    text-align: center; }
-  .DeliveryHero-cta {
-    background-color: #fff;
-    color: #a1d782; }
-    .DeliveryHero-cta:after {
-      border-left-color: #a1d782; }
-
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=deliveries.css.map */

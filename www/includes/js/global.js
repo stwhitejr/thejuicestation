@@ -76,7 +76,7 @@ emailSignup.addEventListener('click', () => {
        signUpText.innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET", "/index.php?controller=pages&action=email_signup&email=" + emailInput, true);
+    xhttp.open("GET", "/index.php?controller=ajax&action=email_signup&email=" + emailInput, true);
     xhttp.send();
   }
 });

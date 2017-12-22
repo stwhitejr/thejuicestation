@@ -1,0 +1,13 @@
+@import 'core/global';
+@import 'core/header';
+@import 'core/footer';
+
+.Error {
+  padding: $spacing--xlarge;
+  text-align: center;
+  &-img {
+    margin: $spacing--medium auto;
+    display: block;
+    width: 20%;
+  }
+}

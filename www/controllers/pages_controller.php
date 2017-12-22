@@ -11,6 +11,7 @@
   require_once('models/pages_model.php');
   class Pages_Controller {
 
+    public $id = CONTROLLER_ID_PAGES;
     public $view;
     public $page_model;
     public $ajax_content;
@@ -29,25 +30,68 @@
     }
 
     /**
-     * Ajax - Adds email to DB
-     * Returns success or failure message
+     * Intialize about view
      *
-     * @return string
+     * @return void
      */
-    public function email_signup() {
-      $email = $_GET['email'];
-      $this->page_model = new Pages_Model();
-      if ($email) {
-        $this->ajax_content = $this->page_model->email_signup($email);
-      } else {
-        return false;
-      }
+    public function about() {
+      require_once('views/pages/about_view.php');
+      $this->page_model = new Pages_Model(PAGE_ID_ABOUT);
+      $this->page_model->page_title = 'The Juice Station';
+      $this->page_model->css_files = ['about'];
+      $this->view = new About_View($this->page_model);
     }
 
-    // public function error() {
-    //   $this->page_title = 'This is my page title for error';
-    //   $this->content_view = 'views/pages/error';
-    //   return $this->get_view();
-    // }
+    /**
+     * Intialize menu view
+     *
+     * @return void
+     */
+    public function menu() {
+      require_once('views/pages/menu_view.php');
+      $this->page_model = new Pages_Model(PAGE_ID_MENU);
+      $this->page_model->page_title = 'The Juice Station';
+      $this->page_model->css_files = ['menu'];
+      $this->view = new Menu_View($this->page_model);
+    }
+
+    /**
+     * Intialize cleanses view
+     *
+     * @return void
+     */
+    public function cleanses() {
+      require_once('views/pages/cleanses_view.php');
+      $this->page_model = new Pages_Model(PAGE_ID_CLEANSES);
+      $this->page_model->page_title = 'The Juice Station';
+      $this->page_model->css_files = ['cleanses'];
+      $this->view = new Cleanses_View($this->page_model);
+    }
+
+    /**
+     * Intialize deliveries view
+     *
+     * @return void
+     */
+    public function deliveries() {
+      require_once('views/pages/deliveries_view.php');
+      $this->page_model = new Pages_Model(PAGE_ID_DELIVERY_SERVICE);
+      $this->page_model->page_title = 'The Juice Station';
+      $this->page_model->css_files = ['deliveries'];
+      $this->view = new Deliveries_View($this->page_model);
+    }
+
+    /**
+     * Intialize error view
+     *
+     * @return void
+     */
+    public function error() {
+      require_once('views/pages/error_view.php');
+      $this->page_model = new Pages_Model();
+      $this->page_model->page_title = 'The Juice Station';
+      $this->page_model->css_files = ['error'];
+      $this->view = new Error_View($this->page_model);
+    }
   }
 ?>

@@ -1,0 +1,45 @@
+@import 'core/global';
+@import 'core/header';
+@import 'core/footer';
+
+.Hero {
+  min-height: 440px;
+  // background: url('../images/home/hero.jpg') bottom center;
+  background-size: cover;
+  position: relative;
+  padding: 20px 0;
+  &:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba($color--white, .2);
+  }
+  @media only screen and (max-width:$bp--medium) {
+    min-height: auto;
+  }
+  &-header {
+    padding-bottom: $spacing--small;
+  }
+  &-contentBox {
+    margin: 0 auto;
+    background-color: rgba($color--pink, .9);
+    position: relative;
+    z-index: 2; // Get above the fade
+    @extend %circlebox;
+    @media only screen and (max-width:$bp--small) {
+      margin: 0 auto;
+    }
+  }
+  &-innerContentBox {
+    padding: 20% 5%;
+    color: $color--white;
+    text-align: center;
+  }
+  &-cta {
+    @extend %button;
+  }
+}

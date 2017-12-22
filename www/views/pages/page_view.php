@@ -41,5 +41,14 @@
     public function css_files() {
       return $this->model->css_files;
     }
+
+    /**
+     * JS Files
+     *
+     * @return array
+     */
+    public function js_files() {
+      return $this->model->js_files;
+    }
   }
 ?>

@@ -37,7 +37,7 @@
               Plant&nbsp;Based &nbsp;&nbsp;No&nbsp;Added&nbsp;Sugar &nbsp;&nbsp;No&nbsp;Artificial&nbsp;Flavors &nbsp;&nbsp;Gluten&nbsp;Free &nbsp;&nbsp;All&nbsp;Natural &nbsp;&nbsp;Vegan
             </h2>
           </div>
-          <a href="/healthy-menu" class="MenuHero-cta">view our menu</a>
+          <a href="/menu" class="MenuHero-cta">view our menu</a>
         </section>
         <section class="CleanseHero" id="js-cleanse-hero">
           <div class="CleanseHero-contentBox">
@@ -47,7 +47,7 @@
             <p class="CleanseHero-copy u-Row--medium">
               The Juice Station offers many different cleanse programs that will revitalize your mind and body to get you back on track to healthy living. Don\'t wait any longer! Start your cleanse today!
             </p>
-            <a href="/juice-cleanse" class="CleanseHero-cta">learn more about our cleanse</a>
+            <a href="/cleanses" class="CleanseHero-cta">learn more about our cleanse</a>
           </div>
           <div class="CleanseHero-decor">
             <img src="includes/images/home/lemon_ginger.svg" id="js-cleanse-decor" />
@@ -62,7 +62,7 @@
               <p class="DeliveryHero-copy u-Row--medium">
                 Can\'t make it to the store as often as you need your juice station items? No problem! Sign up for our subscription delivery service and we\'ll bring them straight to your door!
               </p>
-              <a href="/juice-deliveries" class="DeliveryHero-cta">sign up for juice deliveries</a>
+              <a href="/deliveries" class="DeliveryHero-cta">sign up for juice deliveries</a>
           </div>
           </div>
         </section>

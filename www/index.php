@@ -1,11 +1,14 @@
 <?php
+  // Constants
+  const CONTROLLER_ID_PAGES = 01;
+  const CONTROLLER_ID_AJAX = 02;
   // Check if localhost
   if ($_SERVER['REMOTE_ADDR'] === '127.0.0.1') {
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
     $is_dev = true;
-  //   // Compile sass
-    shell_exec('cd ../ && npm run sass');
+    // Compile sass
+    // shell_exec('cd ../ && npm run sass');
   } else {
     $is_dev = false;
     $is_prod = $_GET['prod'];
@@ -22,7 +25,7 @@
   }
 
   // list of allowed controllers
-  $controllers = array('pages' => ['home', 'email_signup', 'error']);
+  $controllers = array('pages' => ['home', 'about', 'cleanses', 'menu', 'deliveries', 'error'], 'ajax' => ['email_signup']);
 
   // change the action to the error page if we're requesting something not allowed
   if (!array_key_exists($controller, $controllers) || !in_array($action, $controllers[$controller])) {
@@ -37,7 +40,10 @@
   switch($controller) {
     case 'pages':
       $controller = new Pages_Controller();
-    break;
+      break;
+    case 'ajax':
+      $controller = new Ajax_Controller();
+      break;
   }
 
   // call the action
@@ -47,7 +53,7 @@
   $view = $controller->view;
 
   // Only return the base HTML if this isn't an ajax request
-  if (!$controller->ajax_content) {
+  if ($controller->id !== CONTROLLER_ID_AJAX) {
     if (!$is_dev && !$is_prod) {
       require_once('coming_soon.php');
     } else {
@@ -155,11 +161,14 @@
           </footer>
         </div>
         <script type="text/javascript" src="includes/js/global.js"></script>
+        <?php foreach ($view->js_files() as $js_file) {?>
+          <script type="text/javascript" src="includes/js/<?=$js_file?>.js"></script>
+        <?php } ?>
       </body>
     </html>
 <?php
     }
   } else {
-    echo $controller->ajax_content;
+    echo $view->content;
   }
 ?>

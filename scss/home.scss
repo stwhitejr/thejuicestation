@@ -78,12 +78,12 @@
   }
 }
 .CleanseHero {
-  margin: 70px 0 70px;
+  margin: 70px 0;
   padding: $spacing--medium;
   display: flex;
   align-items: center;
   @media only screen and (max-width:$bp--medium) {
-    margin: 0;
+    margin: 40px 0 50px;
   }
   @media only screen and (max-width:$bp--small) {
     display: block;
