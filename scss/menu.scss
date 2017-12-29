@@ -2,44 +2,41 @@
 @import 'core/header';
 @import 'core/footer';
 
-.Hero {
-  min-height: 440px;
-  // background: url('../images/home/hero.jpg') bottom center;
-  background-size: cover;
+.Menu {
+  background-color: #f5efe4;
+  background-size: 20%;
+  padding: $spacing--medium;
   position: relative;
-  padding: 20px 0;
-  &:after {
-    content: ' ';
-    display: block;
+  &::after {
     position: absolute;
+    background: url('../images/menu/vegetable_pattern.png') repeat bottom;
+    opacity: .04;
     top: 0;
     bottom: 0;
-    width: 100%;
-    z-index: 1;
-    background-color: rgba($color--white, .2);
+    left: 0;
+    right: 0;
+    content: '';
   }
-  @media only screen and (max-width:$bp--medium) {
-    min-height: auto;
+  &-cat {
+    padding: $spacing--medium 0;
   }
-  &-header {
-    padding-bottom: $spacing--small;
-  }
-  &-contentBox {
-    margin: 0 auto;
-    background-color: rgba($color--pink, .9);
-    position: relative;
-    z-index: 2; // Get above the fade
-    @extend %circlebox;
+  &-catHeader {
+    background: url('../images/splash_green.png') repeat-y;
+    line-height: 140%;
+    color: $color--white;
+    width: 270px;
+    text-align: center;
     @media only screen and (max-width:$bp--small) {
       margin: 0 auto;
     }
   }
-  &-innerContentBox {
-    padding: 20% 5%;
-    color: $color--white;
-    text-align: center;
-  }
-  &-cta {
-    @extend %button;
+  &-item {
+    float: left;
+    width: 46%;
+    padding: 2%;
+    @media only screen and (max-width:$bp--small) {
+      float: none;
+      width: 96%;
+    }
   }
 }

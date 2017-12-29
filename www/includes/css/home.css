@@ -55,12 +55,19 @@
 .u-Col--large {
   flex: 3; }
 
-.u-Block {
-  margin: 20px;
+.u-Clear::after {
+  content: ' ';
+  display: table;
+  clear: both; }
+
+.u-Block--small {
   padding: 10px; }
-  @media only screen and (max-device-width: 750px) {
-    .u-Block {
-      margin: 10px; } }
+
+.u-Block--medium {
+  padding: 20px; }
+
+.u-Block--large {
+  padding: 30px; }
 
 .u-Row--small {
   margin-bottom: 10px; }
@@ -88,6 +95,13 @@
 
 .u-ErrorMessage {
   color: #95374c; }
+
+.u-Center {
+  text-align: center; }
+
+.u-BlockCenter {
+  margin: 0 auto;
+  display: block; }
 
 body {
   margin: 0;
@@ -127,6 +141,9 @@ h3 {
 h4 {
   font-size: 120%; }
 
+strong {
+  font-weight: 400; }
+
 a {
   text-decoration: none;
   color: #212126; }
@@ -148,12 +165,6 @@ button {
   font-size: 100%;
   font-weight: 300;
   font-family: "Open Sans", arial, sans-serif; }
-
-button[type="submit"] {
-  background-color: #212126;
-  color: #fff;
-  padding: 10px;
-  font-size: 80%; }
 
 @font-face {
   font-family: 'SinaNova';
@@ -323,6 +334,11 @@ button[type="submit"] {
   .Footer-close {
     text-align: center;
     font-size: 70%; }
+  .Footer-emailSubmit {
+    background-color: #212126;
+    color: #fff;
+    padding: 10px;
+    font-size: 80%; }
 
 .Hero {
   min-height: 440px;
@@ -349,9 +365,6 @@ button[type="submit"] {
     background-color: rgba(228, 104, 148, 0.9);
     position: relative;
     z-index: 2; }
-    @media only screen and (max-width: 600px) {
-      .Hero-contentBox {
-        margin: 0 auto; } }
   .Hero-innerContentBox {
     padding: 20% 5%;
     color: #fff;

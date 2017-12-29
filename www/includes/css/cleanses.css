@@ -1,13 +1,13 @@
-.Hero-cta {
+.CleanseContent-cta {
   padding: 5px 10px;
   display: inline-block;
   text-align: center;
   opacity: .8;
   transition: .2s; }
   @media only screen and (max-width: 600px) {
-    .Hero-cta {
+    .CleanseContent-cta {
       opacity: 1; } }
-  .Hero-cta:after {
+  .CleanseContent-cta:after {
     content: '';
     display: inline-block;
     margin-left: 10px;
@@ -15,16 +15,16 @@
     border-left: 9px solid #fff;
     border-bottom: 7px solid transparent; }
     @media only screen and (max-width: 1119px) {
-      .Hero-cta:after {
+      .CleanseContent-cta:after {
         border-top-width: 6px;
         border-bottom-width: 6px;
         border-left-width: 8px; } }
     @media only screen and (max-width: 600px) {
-      .Hero-cta:after {
+      .CleanseContent-cta:after {
         border-top-width: 5px;
         border-bottom-width: 5px;
         border-left-width: 7px; } }
-  .Hero-cta:hover {
+  .CleanseContent-cta:hover {
     opacity: 1; }
 
 .Hero-contentBox {
@@ -55,12 +55,19 @@
 .u-Col--large {
   flex: 3; }
 
-.u-Block {
-  margin: 20px;
+.u-Clear::after {
+  content: ' ';
+  display: table;
+  clear: both; }
+
+.u-Block--small {
   padding: 10px; }
-  @media only screen and (max-device-width: 750px) {
-    .u-Block {
-      margin: 10px; } }
+
+.u-Block--medium {
+  padding: 20px; }
+
+.u-Block--large {
+  padding: 30px; }
 
 .u-Row--small {
   margin-bottom: 10px; }
@@ -88,6 +95,13 @@
 
 .u-ErrorMessage {
   color: #95374c; }
+
+.u-Center {
+  text-align: center; }
+
+.u-BlockCenter {
+  margin: 0 auto;
+  display: block; }
 
 body {
   margin: 0;
@@ -127,6 +141,9 @@ h3 {
 h4 {
   font-size: 120%; }
 
+strong {
+  font-weight: 400; }
+
 a {
   text-decoration: none;
   color: #212126; }
@@ -148,12 +165,6 @@ button {
   font-size: 100%;
   font-weight: 300;
   font-family: "Open Sans", arial, sans-serif; }
-
-button[type="submit"] {
-  background-color: #212126;
-  color: #fff;
-  padding: 10px;
-  font-size: 80%; }
 
 @font-face {
   font-family: 'SinaNova';
@@ -323,9 +334,15 @@ button[type="submit"] {
   .Footer-close {
     text-align: center;
     font-size: 70%; }
+  .Footer-emailSubmit {
+    background-color: #212126;
+    color: #fff;
+    padding: 10px;
+    font-size: 80%; }
 
 .Hero {
   min-height: 440px;
+  background: url("../images/cleanse/hero.jpg") center center;
   background-size: cover;
   position: relative;
   padding: 20px 0; }
@@ -345,15 +362,36 @@ button[type="submit"] {
     padding-bottom: 10px; }
   .Hero-contentBox {
     margin: 0 auto;
-    background-color: rgba(228, 104, 148, 0.9);
+    background-color: rgba(240, 168, 97, 0.9);
     position: relative;
     z-index: 2; }
-    @media only screen and (max-width: 600px) {
-      .Hero-contentBox {
-        margin: 0 auto; } }
   .Hero-innerContentBox {
     padding: 20% 5%;
     color: #fff;
     text-align: center; }
+
+.CleanseContent {
+  padding: 70px; }
+  @media only screen and (max-width: 750px) {
+    .CleanseContent {
+      padding: 30px; } }
+  .CleanseContent-item {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: solid 1px #e5e8ee; }
+    .CleanseContent-item:last-child {
+      border: 0; }
+  .CleanseContent-img {
+    width: 90%;
+    display: block;
+    margin: 0 auto; }
+    @media only screen and (max-width: 750px) {
+      .CleanseContent-img {
+        margin: 20px 0 0;
+        width: 100%; } }
+  .CleanseContent-cta {
+    background-color: #f0a861;
+    color: #fff;
+    margin-left: 10px; }
 
 /*# sourceMappingURL=cleanses.css.map */

@@ -1,13 +1,13 @@
-.Hero-cta {
+.DeliveriesForm-submit {
   padding: 5px 10px;
   display: inline-block;
   text-align: center;
   opacity: .8;
   transition: .2s; }
   @media only screen and (max-width: 600px) {
-    .Hero-cta {
+    .DeliveriesForm-submit {
       opacity: 1; } }
-  .Hero-cta:after {
+  .DeliveriesForm-submit:after {
     content: '';
     display: inline-block;
     margin-left: 10px;
@@ -15,16 +15,16 @@
     border-left: 9px solid #fff;
     border-bottom: 7px solid transparent; }
     @media only screen and (max-width: 1119px) {
-      .Hero-cta:after {
+      .DeliveriesForm-submit:after {
         border-top-width: 6px;
         border-bottom-width: 6px;
         border-left-width: 8px; } }
     @media only screen and (max-width: 600px) {
-      .Hero-cta:after {
+      .DeliveriesForm-submit:after {
         border-top-width: 5px;
         border-bottom-width: 5px;
         border-left-width: 7px; } }
-  .Hero-cta:hover {
+  .DeliveriesForm-submit:hover {
     opacity: 1; }
 
 .Hero-contentBox {
@@ -55,12 +55,19 @@
 .u-Col--large {
   flex: 3; }
 
-.u-Block {
-  margin: 20px;
+.u-Clear::after {
+  content: ' ';
+  display: table;
+  clear: both; }
+
+.u-Block--small {
   padding: 10px; }
-  @media only screen and (max-device-width: 750px) {
-    .u-Block {
-      margin: 10px; } }
+
+.u-Block--medium {
+  padding: 20px; }
+
+.u-Block--large {
+  padding: 30px; }
 
 .u-Row--small {
   margin-bottom: 10px; }
@@ -88,6 +95,13 @@
 
 .u-ErrorMessage {
   color: #95374c; }
+
+.u-Center {
+  text-align: center; }
+
+.u-BlockCenter {
+  margin: 0 auto;
+  display: block; }
 
 body {
   margin: 0;
@@ -127,6 +141,9 @@ h3 {
 h4 {
   font-size: 120%; }
 
+strong {
+  font-weight: 400; }
+
 a {
   text-decoration: none;
   color: #212126; }
@@ -148,12 +165,6 @@ button {
   font-size: 100%;
   font-weight: 300;
   font-family: "Open Sans", arial, sans-serif; }
-
-button[type="submit"] {
-  background-color: #212126;
-  color: #fff;
-  padding: 10px;
-  font-size: 80%; }
 
 @font-face {
   font-family: 'SinaNova';
@@ -323,9 +334,15 @@ button[type="submit"] {
   .Footer-close {
     text-align: center;
     font-size: 70%; }
+  .Footer-emailSubmit {
+    background-color: #212126;
+    color: #fff;
+    padding: 10px;
+    font-size: 80%; }
 
 .Hero {
   min-height: 440px;
+  background: url("../images/deliveries/hero.jpg") center center;
   background-size: cover;
   position: relative;
   padding: 20px 0; }
@@ -344,7 +361,7 @@ button[type="submit"] {
   .Hero-header {
     padding-bottom: 10px; }
   .Hero-contentBox {
-    margin: 0 auto;
+    margin: 0 0 0 5%;
     background-color: rgba(228, 104, 148, 0.9);
     position: relative;
     z-index: 2; }
@@ -355,5 +372,57 @@ button[type="submit"] {
     padding: 20% 5%;
     color: #fff;
     text-align: center; }
+
+.DeliveriesContent {
+  padding: 70px; }
+  @media only screen and (max-width: 750px) {
+    .DeliveriesContent {
+      padding: 20px; } }
+
+.DeliveriesForm table {
+  width: 100%; }
+
+.DeliveriesForm-label, .DeliveriesForm-labelTextArea {
+  font-family: "SinaNova", times new roman, serif;
+  font-size: 170%; }
+
+.DeliveriesForm-label {
+  width: 10%;
+  text-align: right;
+  padding-right: 1%;
+  vertical-align: bottom; }
+
+.DeliveriesForm-field {
+  padding: 10px 10px 3px;
+  border-bottom: solid 2px #e5e8ee;
+  vertical-align: middle; }
+
+.DeliveriesForm-labelTextArea {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-bottom: 10px; }
+
+.DeliveriesForm textarea {
+  width: 100%;
+  border: solid 2px #e5e8ee;
+  min-height: 100px;
+  margin-bottom: 20px;
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 80%; }
+
+.DeliveriesForm input {
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  font-size: 80%;
+  width: 100%;
+  background: none; }
+
+.DeliveriesForm-submit {
+  color: #fff;
+  background-color: #e46894;
+  margin: 0 auto;
+  display: block; }
 
 /*# sourceMappingURL=deliveries.css.map */

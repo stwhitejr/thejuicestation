@@ -30,9 +30,6 @@
     position: relative;
     z-index: 2; // Get above the fade
     @extend %circlebox;
-    @media only screen and (max-width:$bp--small) {
-      margin: 0 auto;
-    }
   }
   &-innerContentBox {
     padding: 20% 5%;

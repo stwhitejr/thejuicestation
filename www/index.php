@@ -115,9 +115,6 @@
                   </p>
                 </div>
               </div>
-              <div class="LocationHero-decor">
-                <!-- image -->
-              </div>
             </section>
           </div>
           <footer class="Footer">

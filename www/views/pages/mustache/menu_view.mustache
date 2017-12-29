@@ -1,0 +1,17 @@
+<div class="Menu">
+  {{# menu }}
+  <section class="Menu-cat">
+    <h1 class="Menu-catHeader">{{ category }}</h1>
+    <div class="u-Clear u-Block--small">
+      {{# items }}
+      <div class="Menu-item">
+        <h2 class="u-Row--small">{{ name }}</h2>
+        <p>
+          {{ description }}
+        </p>
+      </div>
+      {{/ items }}
+    </div>
+  </section>
+  {{/ menu}}
+</div>

@@ -15,6 +15,7 @@ $spacing--small: 10px;
 $spacing--medium: 20px;
 $spacing--large: 30px;
 $spacing--xlarge: 50px;
+$spacing--xxlarge: 70px;
 $spacing--mobilesmall: 5px;
 $spacing--mobilemedium: 10px;
 $spacing--mobilelarge: 20px;
@@ -105,12 +106,19 @@ $bp--small: 600px;
 .u-Col--large {
   flex: 3;
 }
-.u-Block {
-  margin: $spacing--medium;
+.u-Clear::after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+.u-Block--small {
   padding: $spacing--small;
-  @media only screen and (max-device-width:$bp--medium) {
-    margin: $spacing--mobilemedium;
-  }
+}
+.u-Block--medium {
+  padding: $spacing--medium;
+}
+.u-Block--large {
+  padding: $spacing--large;
 }
 .u-Row--small {
   margin-bottom: $spacing--small;
@@ -138,6 +146,13 @@ $bp--small: 600px;
 }
 .u-ErrorMessage {
   color: $color--red;
+}
+.u-Center {
+  text-align: center;
+}
+.u-BlockCenter {
+  margin: 0 auto;
+  display: block;
 }
 
 // Resets
@@ -179,6 +194,9 @@ h3 {
 h4 {
   font-size: $fontsize--medium;
 }
+strong {
+  font-weight: 400;
+}
 a {
   text-decoration: none;
   color: $color--dark;
@@ -200,13 +218,6 @@ button {
   font-size: $fontsize--reset;
   font-weight: 300;
   font-family: $font--base;
-}
-// TODO move this to footer form
-button[type="submit"] {
-  background-color: $color--dark;
-  color: $color--white;
-  padding: $spacing--small;
-  font-size: $fontsize--small;
 }
 
 @font-face {

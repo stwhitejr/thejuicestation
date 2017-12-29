@@ -1,26 +1,17 @@
 <?php
   /**
-   * This is page specific content.
-   * @todo let's make this a mustache template or something
    */
   require_once('page_view.php');
   class Deliveries_View extends Page_View {
 
+    private $template_name = 'deliveries';
     /**
      * Content
      *
      * @return string
      */
     public function content() {
-      return '
-        <section class="Hero">
-          <div class="Hero-contentBox">
-            <div class="Hero-innerContentBox">
-              sub page
-            </div>
-          </div>
-        </section>
-      ';
+      return $this->render_mustache($this->template_name, $this);
     }
   }
 ?>
