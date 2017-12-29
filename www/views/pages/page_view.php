@@ -8,10 +8,14 @@
 
   class Page_View {
 
-    private $model;
+    protected $model;
+    public $is_ajax;
 
     public function __construct($model) {
       $this->model = $model;
+      if (isset($_GET['is_ajax'])) {
+        $this->is_ajax = true;
+      }
     }
 
     /**

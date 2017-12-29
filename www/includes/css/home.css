@@ -35,7 +35,17 @@
       width: 470px; } }
   @media only screen and (max-width: 600px) {
     .Hero-contentBox, .DeliveryHero-contentBox {
-      width: 400px; } }
+      width: 90%;
+      border-radius: 5%; } }
+
+.Hero-innerContentBox, .DeliveryHero-innerContentBox {
+  padding: 20% 5%;
+  color: #fff;
+  text-align: center; }
+  @media only screen and (max-width: 600px) {
+    .Hero-innerContentBox, .DeliveryHero-innerContentBox {
+      padding: 7% 5%;
+      margin: 10% 0; } }
 
 .u-FlexBox {
   display: flex; }
@@ -94,7 +104,22 @@
   padding: 20px; }
 
 .u-ErrorMessage {
-  color: #95374c; }
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border: solid 2px #95374c;
+  color: #95374c;
+  display: inline-block; }
+
+.u-ErrorInput {
+  background-color: #f1dadf !important; }
+
+.u-Center {
+  text-align: center; }
+
+.u-BlockCenter {
+  margin: 0 auto;
+  display: block; }
 
 .u-Center {
   text-align: center; }
@@ -124,7 +149,7 @@ p, h1, h2, h3, h4 {
   font-weight: 300; }
 
 p {
-  line-height: 130%; }
+  line-height: 1.5em; }
 
 h1, h2, h3, h4 {
   font-family: "SinaNova", times new roman, serif; }
@@ -352,7 +377,8 @@ button {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.2); }
   @media only screen and (max-width: 750px) {
@@ -365,10 +391,6 @@ button {
     background-color: rgba(228, 104, 148, 0.9);
     position: relative;
     z-index: 2; }
-  .Hero-innerContentBox {
-    padding: 20% 5%;
-    color: #fff;
-    text-align: center; }
   .Hero-cta {
     background-color: #fff;
     color: #e46894; }
@@ -440,10 +462,6 @@ button {
     @media only screen and (max-width: 600px) {
       .DeliveryHero-contentBox {
         margin: 0 auto; } }
-  .DeliveryHero-innerContentBox {
-    padding: 25% 5%;
-    color: #fff;
-    text-align: center; }
   .DeliveryHero-cta {
     background-color: #fff;
     color: #a1d782; }

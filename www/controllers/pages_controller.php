@@ -26,6 +26,9 @@
       $this->page_model = new Pages_Model(PAGE_ID_HOME);
       $this->page_model->page_title = 'The Juice Station';
       $this->page_model->css_files = ['home'];
+      if (isset($_GET['email_signup'])) {
+        $this->page_model->email_signup($_GET['email_signup']);
+      }
       $this->view = new Home_View($this->page_model);
     }
 
@@ -78,6 +81,10 @@
       $this->page_model = new Pages_Model(PAGE_ID_DELIVERY_SERVICE);
       $this->page_model->page_title = 'The Juice Station';
       $this->page_model->css_files = ['deliveries'];
+      $this->page_model->js_files = ['deliveries'];
+      if (isset($_POST['delivery_request'])) {
+        $this->page_model->delivery_request();
+      }
       $this->view = new Deliveries_View($this->page_model);
     }
 

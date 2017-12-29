@@ -55,7 +55,22 @@
   padding: 20px; }
 
 .u-ErrorMessage {
-  color: #95374c; }
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border: solid 2px #95374c;
+  color: #95374c;
+  display: inline-block; }
+
+.u-ErrorInput {
+  background-color: #f1dadf !important; }
+
+.u-Center {
+  text-align: center; }
+
+.u-BlockCenter {
+  margin: 0 auto;
+  display: block; }
 
 .u-Center {
   text-align: center; }
@@ -85,7 +100,7 @@ p, h1, h2, h3, h4 {
   font-weight: 300; }
 
 p {
-  line-height: 130%; }
+  line-height: 1.5em; }
 
 h1, h2, h3, h4 {
   font-family: "SinaNova", times new roman, serif; }

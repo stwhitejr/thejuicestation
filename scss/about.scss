@@ -14,7 +14,8 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     z-index: 1;
     background-color: rgba($color--white, .2);
   }
@@ -35,9 +36,7 @@
     }
   }
   &-innerContentBox {
-    padding: 20% 5%;
-    color: $color--white;
-    text-align: center;
+    @extend %circlebox-inner;
   }
 }
 .MeetTheOwner {
@@ -48,13 +47,32 @@
   &-img {
     float: right;
     margin: 0 4% 3% 7%;
+    width: 35%;
+    @media only screen and (max-width:$bp--small) {
+      width: 45%;
+      margin: 2% 0% 2% 4%;
+    }
   }
 }
 .AdvisoryBoard {
-  padding: 0 $spacing--xlarge $spacing--xlarge;
-  background: url('../images/splash_bg_light.jpg') no-repeat;
+  padding: 0 $spacing--medium $spacing--xlarge;
+  background-image: url('../images/splash_bg_light_top.gif'), url('../images/splash_bg_light_mid.gif');
+  background-position: left top, left center;
+  background-repeat: no-repeat, repeat-y;
   background-size: 100%;
+  @media only screen and (max-width:$bp--medium) {
+    padding: 0 $spacing--small $spacing--large;
+  }
   &-content {
     font-size: $fontsize--small;
+  }
+  &-img {
+    width: 100%;
+  }
+  &-col {
+    padding: 20px;
+    @media only screen and (max-width:$bp--small) {
+      padding: 15px;
+    }
   }
 }

@@ -7,6 +7,17 @@
   class Home_View extends Page_View {
 
     private $template_name = 'home';
+
+
+    /**
+     * Email signup sucess/failure message
+     *
+     * @return boolean
+     */
+    public function email_signup_message() {
+      return $this->model->email_signup_message;
+    }
+
     /**
      * Content
      *

@@ -35,9 +35,7 @@
     }
   }
   &-innerContentBox {
-    padding: 20% 5%;
-    color: $color--white;
-    text-align: center;
+    @extend %circlebox-inner;
   }
 }
 .DeliveriesContent {
@@ -54,6 +52,9 @@
   &-labelTextArea {
     font-family: $font--primary;
     font-size: $fontsize--xlarge;
+    @media only screen and (max-width:$bp--small) {
+      font-size: $fontsize--medium;
+    }
   }
   &-label {
     width: 10%;
@@ -72,13 +73,19 @@
     width: 100%;
     margin-bottom: $spacing--small;
   }
+  &-textAreaWrap {
+    padding: 5px;
+    border: solid 2px $color--light;
+    margin-bottom: $spacing--medium;
+  }
   textarea {
     width: 100%;
-    border: solid 2px $color--light;
+    padding: 0;
+    border: 0;
     min-height: 100px;
-    margin-bottom: $spacing--medium;
     font-family: $font--base;
     font-size: $fontsize--small;
+    outline: none;
   }
   input {
     border: 0;

@@ -37,7 +37,7 @@
           Sign up to recieve updates on the opening of The Juice Station!
         </p>
         <form>
-          <input type="text" name="email" id="js-signup-email" placeholder="Enter email address" />
+          <input type="text" name="email_signup" id="js-signup-email" placeholder="Enter email address" />
           <button type="submit" id="js-signup-submit">Submit</button>
         </form>
       </section>

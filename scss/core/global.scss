@@ -81,7 +81,17 @@ $bp--small: 600px;
     width: 470px;
   }
   @media only screen and (max-width:$bp--small) {
-    width: 400px;
+    width: 90%;
+    border-radius: 5%;
+  }
+}
+%circlebox-inner {
+  padding: 20% 5%;
+  color: $color--white;
+  text-align: center;
+  @media only screen and (max-width:$bp--small) {
+    padding: 7% 5%;
+    margin: 10% 0;
   }
 }
 
@@ -145,7 +155,22 @@ $bp--small: 600px;
   padding: $spacing--medium;
 }
 .u-ErrorMessage {
+  background-color: $color--white;
+  padding: $spacing--small;
+  margin: 10px 0;
+  border: solid 2px $color--red;
   color: $color--red;
+  display: inline-block;
+}
+.u-ErrorInput {
+  background-color: lighten($color--red, 50%) !important;
+}
+.u-Center {
+  text-align: center;
+}
+.u-BlockCenter {
+  margin: 0 auto;
+  display: block;
 }
 .u-Center {
   text-align: center;
@@ -177,7 +202,7 @@ p, h1, h2, h3, h4 {
   font-weight: 300;
 }
 p {
-  line-height: 130%;
+  line-height: 1.5em;
 }
 h1, h2, h3, h4 {
   font-family: $font--primary;

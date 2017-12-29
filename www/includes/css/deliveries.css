@@ -35,7 +35,17 @@
       width: 470px; } }
   @media only screen and (max-width: 600px) {
     .Hero-contentBox {
-      width: 400px; } }
+      width: 90%;
+      border-radius: 5%; } }
+
+.Hero-innerContentBox {
+  padding: 20% 5%;
+  color: #fff;
+  text-align: center; }
+  @media only screen and (max-width: 600px) {
+    .Hero-innerContentBox {
+      padding: 7% 5%;
+      margin: 10% 0; } }
 
 .u-FlexBox {
   display: flex; }
@@ -94,7 +104,22 @@
   padding: 20px; }
 
 .u-ErrorMessage {
-  color: #95374c; }
+  background-color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border: solid 2px #95374c;
+  color: #95374c;
+  display: inline-block; }
+
+.u-ErrorInput {
+  background-color: #f1dadf !important; }
+
+.u-Center {
+  text-align: center; }
+
+.u-BlockCenter {
+  margin: 0 auto;
+  display: block; }
 
 .u-Center {
   text-align: center; }
@@ -124,7 +149,7 @@ p, h1, h2, h3, h4 {
   font-weight: 300; }
 
 p {
-  line-height: 130%; }
+  line-height: 1.5em; }
 
 h1, h2, h3, h4 {
   font-family: "SinaNova", times new roman, serif; }
@@ -368,10 +393,6 @@ button {
     @media only screen and (max-width: 600px) {
       .Hero-contentBox {
         margin: 0 auto; } }
-  .Hero-innerContentBox {
-    padding: 20% 5%;
-    color: #fff;
-    text-align: center; }
 
 .DeliveriesContent {
   padding: 70px; }
@@ -385,6 +406,9 @@ button {
 .DeliveriesForm-label, .DeliveriesForm-labelTextArea {
   font-family: "SinaNova", times new roman, serif;
   font-size: 170%; }
+  @media only screen and (max-width: 600px) {
+    .DeliveriesForm-label, .DeliveriesForm-labelTextArea {
+      font-size: 120%; } }
 
 .DeliveriesForm-label {
   width: 10%;
@@ -403,13 +427,19 @@ button {
   width: 100%;
   margin-bottom: 10px; }
 
+.DeliveriesForm-textAreaWrap {
+  padding: 5px;
+  border: solid 2px #e5e8ee;
+  margin-bottom: 20px; }
+
 .DeliveriesForm textarea {
   width: 100%;
-  border: solid 2px #e5e8ee;
+  padding: 0;
+  border: 0;
   min-height: 100px;
-  margin-bottom: 20px;
   font-family: "Open Sans", arial, sans-serif;
-  font-size: 80%; }
+  font-size: 80%;
+  outline: none; }
 
 .DeliveriesForm input {
   border: 0;

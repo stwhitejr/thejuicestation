@@ -1,18 +1,17 @@
 <?php
   // Constants
   const CONTROLLER_ID_PAGES = 01;
-  const CONTROLLER_ID_AJAX = 02;
   // Check if localhost
   if ($_SERVER['REMOTE_ADDR'] === '127.0.0.1') {
     error_reporting(E_ALL);
     ini_set('display_errors', 1);
     $is_dev = true;
     // Compile sass
-    // shell_exec('cd ../ && npm run sass');
+    shell_exec('cd ../ && npm run sass');
   } else {
-    $is_dev = false;
     $is_prod = $_GET['prod'];
   }
+
   require_once('connection.php');
   require_once('helpers.php');
 
@@ -25,7 +24,7 @@
   }
 
   // list of allowed controllers
-  $controllers = array('pages' => ['home', 'about', 'cleanses', 'menu', 'deliveries', 'error'], 'ajax' => ['email_signup']);
+  $controllers = array('pages' => ['home', 'about', 'cleanses', 'menu', 'deliveries', 'error']);
 
   // change the action to the error page if we're requesting something not allowed
   if (!array_key_exists($controller, $controllers) || !in_array($action, $controllers[$controller])) {
@@ -41,9 +40,6 @@
     case 'pages':
       $controller = new Pages_Controller();
       break;
-    case 'ajax':
-      $controller = new Ajax_Controller();
-      break;
   }
 
   // call the action
@@ -53,8 +49,8 @@
   $view = $controller->view;
 
   // Only return the base HTML if this isn't an ajax request
-  if ($controller->id !== CONTROLLER_ID_AJAX) {
-    if (!$is_dev && !$is_prod) {
+  if (!$view->is_ajax) {
+    if (!$is_dev && !$is_prod && $action === 'home') {
       require_once('coming_soon.php');
     } else {
 ?>
@@ -62,7 +58,7 @@
     <html lang="en">
       <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=400, initial-scale=1.0">
+        <meta name="viewport" content="width=max-device-width, initial-scale=1.0">
         <title>
           <?=$view->page_title()?>
         </title>
@@ -75,7 +71,7 @@
         <div class="Wrap">
           <header class="Header" id="js-header">
             <div class="Logo">
-              <img src="includes/images/logo.svg" alt="The Juice Station" class="Logo-img" />
+              <a href="/?prod=1"><img src="includes/images/logo.svg" alt="The Juice Station" class="Logo-img" /></a>
             </div>
             <nav class="Nav" id="js-nav">
               <?=$view->navigation()?>
@@ -126,8 +122,8 @@
                 <p class="Footer-copy" id="js-email-signup-text">
                   Get updates on events, coupons, and more!
                 </p>
-                <form class="u-FlexBox">
-                  <input type="text" name="email" placeholder="Enter your email address" class="Footer-emailSignup u-Col--large" id="js-email-signup-field" />
+                <form class="u-FlexBox" id="js-email-signup-form">
+                  <input type="email" name="email_signup" placeholder="Enter your email address" class="Footer-emailSignup u-Col--large" id="js-email-signup-field" />
                   <button type="submit" class="Footer-emailSubmit u-Col" id="js-email-signup">sign up</button>
                 </form>
               </section>
@@ -166,6 +162,6 @@
 <?php
     }
   } else {
-    echo $view->content;
+    echo $view->content();
   }
 ?>

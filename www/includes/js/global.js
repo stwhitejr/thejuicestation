@@ -73,10 +73,11 @@ emailSignup.addEventListener('click', () => {
     const xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-       signUpText.innerHTML = this.responseText;
+        signUpText.remove();
+       document.getElementById('js-email-signup-form').innerHTML = this.responseText;
       }
     };
-    xhttp.open("GET", "/index.php?controller=ajax&action=email_signup&email=" + emailInput, true);
+    xhttp.open("GET", "/?is_ajax=1&email_signup=" + emailInput, true);
     xhttp.send();
   }
 });

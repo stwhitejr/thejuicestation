@@ -14,7 +14,8 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     z-index: 1;
     background-color: rgba($color--white, .2);
   }
@@ -32,9 +33,7 @@
     @extend %circlebox;
   }
   &-innerContentBox {
-    padding: 20% 5%;
-    color: $color--white;
-    text-align: center;
+    @extend %circlebox-inner;
   }
   &-cta {
     @extend %button;
@@ -123,9 +122,7 @@
     }
   }
   &-innerContentBox {
-    padding: 25% 5%;
-    color: $color--white;
-    text-align: center;
+    @extend %circlebox-inner;
   }
   &-cta {
     @extend %button;
