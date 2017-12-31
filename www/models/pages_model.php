@@ -55,6 +55,15 @@
         $error_messages = implode('<br/>', $error_messages);
         $this->delivery_request = ['error_messages' => $error_messages];
       } else {
+        $db = Db::getInstance();
+        $errorCode = '';
+        try {
+          $insert = $db->exec('INSERT INTO tblDeliveryRequest VALUES ("' . $name . '", "' . $address . '", "' . $town . '", "' . $zip . '", "' . $email . '", "' . $phone . '", "' . $request . '", "' . $frequency . '")');
+        } catch(Exception $e) {
+          error_log($e);
+          $this->delivery_request = ['error_messages' => 'Sorry we\'re having technical difficulties. Please contact us directly using the phone number or email address below.'];
+          return;
+        }
         $this->delivery_request = ['success' => 1];
       }
     }

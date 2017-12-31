@@ -1,13 +1,15 @@
- <section class="Hero">
-  <div class="Hero-contentBox">
-    <div class="Hero-innerContentBox">
-      <h1 class="Hero-header">sign up for&nbsp;deliveries!</h1>
-      <p class="Hero-copy u-Row--medium">
-        We have a limited amount of slots open for deliveries at the moment. Please use the form below to request a desired time, what you'd like delivered, and where it's going. We'll get back to you as soon as possible with steps to move&nbsp;forward.
-      </p>
+ {{^ is_ajax }}
+   <section class="Hero">
+    <div class="Hero-contentBox">
+      <div class="Hero-innerContentBox">
+        <h1 class="Hero-header">sign up for&nbsp;deliveries!</h1>
+        <p class="Hero-copy u-Row--medium">
+          We have a limited amount of slots open for deliveries at the moment. Please use the form below to request a desired time, what you'd like delivered, and where it's going. We'll get back to you as soon as possible with steps to move&nbsp;forward.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+{{/ is_ajax }}
 <section class="DeliveriesContent" id="js-delivery-request">
   {{# delivery_request.success }}
     <h2 class="{{^is_ajax}}u-Block--large{{/is_ajax}} u-Center">Thanks for requesting our delivery service!<br/>We'll get back to you as soon as possible with more information.</h2>
