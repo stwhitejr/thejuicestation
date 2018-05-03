@@ -366,19 +366,17 @@ button {
       .Hero-contentBox {
         margin: 0 auto; } }
 
-.MeetTheOwner {
-  padding: 70px; }
+.About {
+  padding: 70px;
+  text-align: center; }
   @media only screen and (max-width: 750px) {
-    .MeetTheOwner {
+    .About {
       padding: 30px; } }
-  .MeetTheOwner-img {
-    float: right;
-    margin: 0 4% 3% 7%;
-    width: 35%; }
-    @media only screen and (max-width: 600px) {
-      .MeetTheOwner-img {
-        width: 45%;
-        margin: 2% 0% 2% 4%; } }
+  .About-quote {
+    margin-bottom: 10px; }
+  .About-quoteAuthor {
+    font-size: 70%;
+    font-style: italic; }
 
 .AdvisoryBoard {
   padding: 0 20px 50px;
@@ -389,14 +387,41 @@ button {
   @media only screen and (max-width: 750px) {
     .AdvisoryBoard {
       padding: 0 10px 30px; } }
-  .AdvisoryBoard-content {
+  .AdvisoryBoard-content, .AdvisoryBoard-readMore {
     font-size: 80%; }
+  .AdvisoryBoard-content {
+    margin-bottom: 10px; }
+  .AdvisoryBoard-content--hidden {
+    display: none; }
   .AdvisoryBoard-img {
-    width: 100%; }
+    width: 100%;
+    max-width: 400px; }
+  .AdvisoryBoard-readMore {
+    font-weight: bold; }
   .AdvisoryBoard-col {
-    padding: 20px; }
+    padding: 20px;
+    transition: .3s; }
     @media only screen and (max-width: 600px) {
       .AdvisoryBoard-col {
         padding: 15px; } }
+    .AdvisoryBoard-col--hidden {
+      opacity: .3; }
+    .AdvisoryBoard-col--expand {
+      position: absolute;
+      left: 20px;
+      right: 20px;
+      z-index: 1;
+      background-color: #e5e8ee;
+      box-shadow: 0 0 10px 0 #878787; }
+      .AdvisoryBoard-col--expand .AdvisoryBoard-img {
+        float: left;
+        margin-right: 20px; }
+        @media only screen and (max-width: 750px) {
+          .AdvisoryBoard-col--expand .AdvisoryBoard-img {
+            max-width: 200px; } }
+      .AdvisoryBoard-col--expand .AdvisoryBoard-content--hidden {
+        display: block; }
+      .AdvisoryBoard-col--expand .AdvisoryBoard-wrap {
+        float: left; }
 
 /*# sourceMappingURL=about.css.map */

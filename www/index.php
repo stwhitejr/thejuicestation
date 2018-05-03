@@ -8,8 +8,6 @@
     $is_dev = true;
     // Compile sass
     shell_exec('cd ../ && npm run sass');
-  } else {
-    $is_prod = $_GET['prod'];
   }
 
   require_once('connection.php');
@@ -50,7 +48,8 @@
 
   // Only return the base HTML if this isn't an ajax request
   if (!$view->is_ajax) {
-    if (!$is_dev && !$is_prod && $action === 'home') {
+    //@TODO Remove this
+    if (!$is_dev && $action === 'home') {
       require_once('coming_soon.php');
     } else {
 ?>
@@ -140,7 +139,7 @@
                     <a href="https://www.instagram.com/thejuicestationma/" target="_blank"><img src="includes/images/instagram.svg" class="Footer-socialIcon" /></a>
                   </div>
                   <div class="u-Col--medium u-ColMargin">
-                    <a href="https://www.instagram.com/thejuicestationma/" target="_blank"><img src="includes/images/instagram_temp.jpg" class="Footer-instagramThumb" /></a>
+                    <a href="https://www.instagram.com/thejuicestationma/" target="_blank"><img src="<?=$view->get_instagram_image_url()?>" class="Footer-instagramThumb" /></a>
                   </div>
                 </div>
               </section>
@@ -162,6 +161,7 @@
 <?php
     }
   } else {
+    // Ajax
     echo $view->content();
   }
 ?>

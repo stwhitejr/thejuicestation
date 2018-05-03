@@ -23,7 +23,8 @@
      */
     public function home() {
       require_once('views/pages/home_view.php');
-      $this->page_model = new Pages_Model(PAGE_ID_HOME);
+      $this->page_model = new Pages_Model();
+      $this->page_id = PAGE_ID_HOME;
       $this->page_model->page_title = 'The Juice Station';
       $this->page_model->css_files = ['home'];
       if (isset($_GET['email_signup'])) {
@@ -39,9 +40,11 @@
      */
     public function about() {
       require_once('views/pages/about_view.php');
-      $this->page_model = new Pages_Model(PAGE_ID_ABOUT);
+      $this->page_model = new Pages_Model();
+      $this->page_model->page_id = PAGE_ID_ABOUT;
       $this->page_model->page_title = 'The Juice Station';
       $this->page_model->css_files = ['about'];
+      $this->page_model->js_files = ['about'];
       $this->view = new About_View($this->page_model);
     }
 
@@ -52,7 +55,8 @@
      */
     public function menu() {
       require_once('views/pages/menu_view.php');
-      $this->page_model = new Pages_Model(PAGE_ID_MENU);
+      $this->page_model = new Pages_Model();
+      $this->page_model->page_id = PAGE_ID_MENU;
       $this->page_model->page_title = 'The Juice Station';
       $this->page_model->css_files = ['menu'];
       $this->view = new Menu_View($this->page_model);
@@ -65,7 +69,8 @@
      */
     public function cleanses() {
       require_once('views/pages/cleanses_view.php');
-      $this->page_model = new Pages_Model(PAGE_ID_CLEANSES);
+      $this->page_model = new Pages_Model();
+      $this->page_model->page_id = PAGE_ID_CLEANSES;
       $this->page_model->page_title = 'The Juice Station';
       $this->page_model->css_files = ['cleanses'];
       $this->view = new Cleanses_View($this->page_model);
@@ -78,7 +83,8 @@
      */
     public function deliveries() {
       require_once('views/pages/deliveries_view.php');
-      $this->page_model = new Pages_Model(PAGE_ID_DELIVERY_SERVICE);
+      $this->page_model = new Pages_Model();
+      $this->page_model->page_id = PAGE_ID_DELIVERY_SERVICE;
       $this->page_model->page_title = 'The Juice Station';
       $this->page_model->css_files = ['deliveries'];
       $this->page_model->js_files = ['deliveries'];

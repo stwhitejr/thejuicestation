@@ -19,9 +19,14 @@
     public $page_id;
     public $delivery_request;
     public $email_signup_message;
+    public $instagram_image_url;
 
-    function __construct($page_id = null) {
-      $this->page_id = $page_id;
+    function __construct() {
+      // Get instagram url
+      $instagram_data = json_decode(file_get_contents('https://www.instagram.com/thejuicestationma/?__a=1'));
+      if ($instagram_data) {
+        $this->instagram_image_url = $instagram_datauser->media->nodes[0]->thumbnail_resources[0]->src;
+      }
     }
 
     function delivery_request(){

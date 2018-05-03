@@ -1,7 +1,6 @@
 <?php
   /**
    * This is page specific content.
-   * @todo let's make this a mustache template or something
    */
   require_once('page_view.php');
   class Home_View extends Page_View {
@@ -12,7 +11,7 @@
     /**
      * Email signup sucess/failure message
      *
-     * @return boolean
+     * @return string
      */
     public function email_signup_message() {
       return $this->model->email_signup_message;

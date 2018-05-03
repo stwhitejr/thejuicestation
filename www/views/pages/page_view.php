@@ -60,6 +60,15 @@
     }
 
     /**
+     * Instagram Image Url
+     *
+     * @return string
+     */
+    public function get_instagram_image_url() {
+      return $this->model->instagram_image_url;
+    }
+
+    /**
      * Render Content
      *
      * @return string
