@@ -425,3 +425,39 @@ button {
         float: left; }
 
 /*# sourceMappingURL=about.css.map */
+
+.ModalWrap {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, .5);
+}
+  .ModalWrap--active {
+    display: block;
+  }
+
+.Modal {
+  padding: 20px;
+  margin: 20px;
+  position: fixed;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #ddd;
+  background-color: #fff;
+}
+  .Modal:before {
+    display: block;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    content: 'close';
+  }
+  .Modal-content {
+    display: none;
+  }
+    .Modal-content--active {
+      display: block;
+    }

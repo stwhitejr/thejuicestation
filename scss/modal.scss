@@ -1,0 +1,45 @@
+.ModalWrap {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba($color--dark, .5);
+  cursor: pointer;
+  &--active {
+    display: block;
+  }
+}
+.Modal {
+  padding: $spacing--large;
+  margin: $spacing--large;
+  position: fixed;
+  top: 100px; // Clear mobile header
+  border-radius: 10px;
+  border: solid 5px $color--dark;
+  max-width: 70%;
+  box-shadow: 0 0 10px 0 $color--medium;
+  background-color: $color--white;
+  @media only screen and (max-width:$bp--medium) {
+    max-width: none;
+  }
+  // Close button
+  &:before {
+    display: block;
+    padding: $spacing--xsmall;
+    border-radius: 5px;
+    background-color: $color--white;
+    right: $spacing--small;
+    top: $spacing--small;
+    position: absolute;
+    content: 'close';
+  }
+  &-content {
+    display: none;
+    &--active {
+      display: block;
+    }
+  }
+}

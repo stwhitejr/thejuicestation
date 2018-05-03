@@ -187,6 +187,7 @@ body {
   font-family: $font--base;
   font-weight: 300;
   font-size: $fontsize--base;
+  position: relative;
   @media only screen and (max-width:$bp--large) {
     font-size: $fontsize--largebase;
   }

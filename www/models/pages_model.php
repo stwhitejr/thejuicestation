@@ -69,6 +69,14 @@
           $this->delivery_request = ['error_messages' => 'Sorry we\'re having technical difficulties. Please contact us directly using the phone number or email address below.'];
           return;
         }
+
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers .= 'From: <thejuicestation@thejuicestation.net>';
+        $email_message = '
+          Contact Information from Website Form: <br/>
+          Name: ' . $name . '<br/> Address: ' . $address . '<br/> Town: ' . $town . '<br/> Zip: ' . $zip . '<br/> Email: ' . $email . '<br/> Phone: ' . $phone . '<br/> Request: ' . $request . '<br/> Frequency: ' . $frequency;
+        mail('stwhitejr@gmail.com', 'Juice Station Delivery Service Request', $email_message, $headers);
         $this->delivery_request = ['success' => 1];
       }
     }

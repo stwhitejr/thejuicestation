@@ -44,7 +44,7 @@
       $this->page_model->page_id = PAGE_ID_ABOUT;
       $this->page_model->page_title = 'The Juice Station';
       $this->page_model->css_files = ['about'];
-      $this->page_model->js_files = ['about'];
+      $this->page_model->js_files = ['modal'];
       $this->view = new About_View($this->page_model);
     }
 

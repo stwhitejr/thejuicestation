@@ -3,6 +3,7 @@
     <div class="Hero-innerContentBox">
       <h1 class="Hero-header">the juice station&nbsp;promise</h1>
       <p class="Hero-copy u-Row--medium">
+        {{! @TODO Add mission statement }}
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate officia eveniet fuga dolor illo obcaecati laboriosam accusamus, culpa, quia harum qui esse sed molestias autem, odio unde. Quas, cum! Wuia harum qui esse sed molestias autem, odio unde.
       </p>
     </div>
@@ -20,38 +21,33 @@
   </h2>
   <div class="u-FlexBox u-NoMobileFlex">
     <div class="u-FlexBox u-Col">
-      <div class="u-Col AdvisoryBoard-col">
+      <div class="u-Col AdvisoryBoard-col js-modal-open" data-modal-id="1">
         <img src="includes/images/about/dave.jpg" class="u-Row--small AdvisoryBoard-img" alt="" />
         <h4>David O’Brien</h4>
         <p class="AdvisoryBoard-content">
           David O’Brien, founder of The Green Light, is a respected nutrition and health expert, well-known across the South Shore of Boston, MA. He has been featured in various health magazines and talk shows for his work that has changed thousands of people’s lives.
-          <div class="AdvisoryBoard-readMore js-read-more">Read More</div>
         </p>
+        <div class="AdvisoryBoard-readMore">Read More</div>
       </div>
-      <div class="u-Col AdvisoryBoard-col">
+      <div class="u-Col AdvisoryBoard-col js-modal-open" data-modal-id="2">
         <img src="includes/images/about/dawn.jpg" class="u-Row--small AdvisoryBoard-img" alt="" />
         <h4>Dawn Fabrizio</h4>
         <p class="AdvisoryBoard-content">
           My passion is to educate, inspire and empower those in need of healing or those who simply want to feel better to live a happier and healthier life. Understanding and helping others achieve optimal health, both mind and body have always been a love of mine.
-          <div class="AdvisoryBoard-readMore js-read-more">Read More</div>
         </p>
+        <div class="AdvisoryBoard-readMore">Read More</div>
       </div>
     </div>
     <div class="u-FlexBox u-Col">
-      <div class="u-Col AdvisoryBoard-col">
+      <div class="u-Col AdvisoryBoard-col js-modal-open" data-modal-id="3">
         <img src="includes/images/about/pat.jpg" class="u-Row--small AdvisoryBoard-img" alt="" />
-        <div class="AdvisoryBoard-contentWrap">
-          <h4>Pat McAuley</h4>
-          <p class="AdvisoryBoard-content">
-            Pat McAuley is a Boston-based serial entrepreneur, author, speaker, and startup consultant for ethical/plant-based companies. He has started and successfully run companies in the tech space and food and beverage industries and has extensive experience building brands from scratch.
-          </p>
-          <p class="AdvisoryBoard-content AdvisoryBoard-content--hidden">
-            After a plant-based diet changed his life, Pat shifted his focus to building and supporting businesses in the plant-based space.  He is the host of the popular Eat Green Make Green Podcast and is currently working on opening Boston's first fully plant-based cafe and beer garden.
-          </p>
-          <div class="AdvisoryBoard-readMore js-read-more">Read More</div>
-        </div>
+        <h4>Pat McAuley</h4>
+        <p class="AdvisoryBoard-content">
+          Pat McAuley is a Boston-based serial entrepreneur, author, speaker, and startup consultant for ethical/plant-based companies. He has started and successfully run companies in the tech space and food and beverage industries and has extensive experience building brands from scratch.
+        </p>
+        <div class="AdvisoryBoard-readMore">Read More</div>
       </div>
-      <div class="u-Col AdvisoryBoard-col">
+      <div class="u-Col AdvisoryBoard-col js-modal-open" data-modal-id="4">
         <img src="includes/images/about/dr_carol.jpg" class="u-Row--small AdvisoryBoard-img" alt="" />
         <h4>Dr. Carol DeFrança</h4>
         <p class="AdvisoryBoard-content">
@@ -59,9 +55,56 @@
           down to earth and always willing to help. She and her husband, Dr. Scott Chapman,
           have provided conservative functional medicine to the South Shore and surrounding
           communities for 25 years.
-          <div class="AdvisoryBoard-readMore js-read-more">Read More</div>
         </p>
+        <div class="AdvisoryBoard-readMore">Read More</div>
       </div>
     </div>
   </div>
 </section>
+{{! @TODO Add entire bios }}
+<div class="ModalWrap js-modal">
+  <div class="Modal">
+    <div class="Modal-content js-modal-content" data-modal-id="1">
+      <div class="AdvisoryBoard-full">
+        <img src="includes/images/about/dave.jpg" class="u-Row--small AdvisoryBoard-img" alt="" />
+        <h4>David O’Brien</h4>
+        <p class="AdvisoryBoard-content">
+          David O’Brien, founder of The Green Light, is a respected nutrition and health expert, well-known across the South Shore of Boston, MA. He has been featured in various health magazines and talk shows for his work that has changed thousands of people’s lives.
+        </p>
+      </div>
+    </div>
+    <div class="Modal-content js-modal-content" data-modal-id="2">
+      <div class="AdvisoryBoard-full">
+        <img src="includes/images/about/dawn.jpg" class="u-Row--small AdvisoryBoard-img" alt="" />
+        <h4>Dawn Fabrizio</h4>
+        <p class="AdvisoryBoard-content">
+          My passion is to educate, inspire and empower those in need of healing or those who simply want to feel better to live a happier and healthier life. Understanding and helping others achieve optimal health, both mind and body have always been a love of mine.
+        </p>
+      </div>
+    </div>
+    <div class="Modal-content js-modal-content" data-modal-id="3">
+      <div class="AdvisoryBoard-full">
+        <img src="includes/images/about/pat.jpg" class="u-Row--small AdvisoryBoard-img" alt="" />
+        <h4>Pat McAuley</h4>
+        <p class="AdvisoryBoard-content">
+          Pat McAuley is a Boston-based serial entrepreneur, author, speaker, and startup consultant for ethical/plant-based companies. He has started and successfully run companies in the tech space and food and beverage industries and has extensive experience building brands from scratch.
+        </p>
+        <p class="AdvisoryBoard-content">
+          After a plant-based diet changed his life, Pat shifted his focus to building and supporting businesses in the plant-based space.  He is the host of the popular Eat Green Make Green Podcast and is currently working on opening Boston's first fully plant-based cafe and beer garden.
+        </p>
+      </div>
+    </div>
+    <div class="Modal-content js-modal-content" data-modal-id="4">
+      <div class="AdvisoryBoard-full">
+        <img src="includes/images/about/dr_carol.jpg" class="u-Row--small AdvisoryBoard-img" alt="" />
+        <h4>Dr. Carol DeFrança</h4>
+        <p class="AdvisoryBoard-content">
+          Dr. Carol DeFrança is a practicing health and wellness clinician who is compassionate,
+          down to earth and always willing to help. She and her husband, Dr. Scott Chapman,
+          have provided conservative functional medicine to the South Shore and surrounding
+          communities for 25 years.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
