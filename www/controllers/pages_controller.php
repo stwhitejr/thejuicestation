@@ -9,6 +9,7 @@
   CONST PAGE_ID_BLOG             = 07;
 
   require_once('models/pages_model.php');
+  require_once('models/menu_model.php');
   class Pages_Controller {
 
     public $id = CONTROLLER_ID_PAGES;
@@ -55,10 +56,11 @@
      */
     public function menu() {
       require_once('views/pages/menu_view.php');
-      $this->page_model = new Pages_Model();
+      $this->page_model = new Menu_Model();
       $this->page_model->page_id = PAGE_ID_MENU;
       $this->page_model->page_title = 'The Juice Station';
       $this->page_model->css_files = ['menu'];
+      $this->page_model->get_menu_items();
       $this->view = new Menu_View($this->page_model);
     }
 
