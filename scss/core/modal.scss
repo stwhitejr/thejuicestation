@@ -13,28 +13,29 @@
   }
 }
 .Modal {
-  padding: $spacing--large;
-  margin: $spacing--large 0;
-  position: absolute;
+  padding: 35px 30px 30px;
+  margin: $spacing--large auto;
+  position: relative;
   border-radius: 10px;
   border: solid 5px $color--medium;
-  max-width: 70%;
-  transform: translateX(15%);
+  width: 70%;
   box-shadow: 0 0 10px 1px #333;
   background-color: $color--white;
   @media only screen and (max-width:$bp--medium) {
-    max-width: none;
-    transform: none;
+    width: 80%;
   }
   // Close button
   &:before {
     display: block;
     padding: $spacing--xsmall;
     border-radius: 5px;
-    background-color: $color--white;
-    right: $spacing--small;
-    top: $spacing--small;
+    background-color: $color--medium;
+    right: 5px;
+    top: 5px;
     position: absolute;
+    font-weight: bold;
+    color: $color--white;
+    font-size: $fontsize--small;
     content: 'close';
   }
   &-content {

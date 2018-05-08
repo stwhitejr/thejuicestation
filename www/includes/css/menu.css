@@ -323,45 +323,44 @@ button {
     padding: 10px;
     font-size: 80%; }
 
+.MenuWrap {
+  background: url("../images/menu/wood_grain.jpg") repeat;
+  padding: 30px; }
+  @media only screen and (max-width: 750px) {
+    .MenuWrap {
+      padding: 20px; } }
+
 .Menu {
-  background-color: #f5efe4;
-  background-size: 20%;
-  padding: 20px;
-  position: relative; }
-  .Menu::after {
-    position: absolute;
-    background: url("../images/menu/vegetable_pattern.png") repeat bottom;
-    opacity: .04;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    content: '';
-    z-index: 0; }
+  background: url("../images/menu/chalkboard.jpg") repeat #000;
+  color: #fcfcfc;
+  padding: 20px; }
   .Menu-cat {
-    padding: 20px 0;
-    z-index: 1;
-    position: relative; }
+    padding: 20px;
+    border: solid 10px #fcfcfc;
+    margin-bottom: 20px; }
+    .Menu-cat:last-child {
+      margin-bottom: 0; }
   .Menu-catHeader {
-    background: url("../images/splash_green.png") repeat-y;
-    line-height: 140%;
-    color: #fff;
-    width: 270px;
-    text-align: center; }
-    @media only screen and (max-width: 600px) {
-      .Menu-catHeader {
-        margin: 0 auto; } }
+    text-align: center;
+    display: block;
+    margin: 10px;
+    padding-bottom: 10px;
+    font-size: 300%;
+    border-bottom: solid 5px #fcfcfc; }
   .Menu-catPriceBySize {
-    margin: 10px 10px 0; }
+    margin: 10px;
+    text-align: center; }
   .Menu-itemBlock {
     column-count: 2;
-    padding: 10px; }
+    column-gap: 50px;
+    padding: 30px; }
     @media only screen and (max-width: 600px) {
       .Menu-itemBlock {
-        column-count: 1; } }
+        column-count: 1;
+        column-gap: 0; } }
   .Menu-item {
-    padding: 2%;
-    width: 96%;
+    padding-bottom: 20px;
+    width: 100%;
     display: inline-block; }
 
 /*# sourceMappingURL=menu.css.map */

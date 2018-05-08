@@ -357,27 +357,28 @@ button {
     display: block; }
 
 .Modal {
-  padding: 30px;
-  margin: 30px 0;
-  position: absolute;
+  padding: 35px 30px 30px;
+  margin: 30px auto;
+  position: relative;
   border-radius: 10px;
   border: solid 5px #878787;
-  max-width: 70%;
-  transform: translateX(15%);
+  width: 70%;
   box-shadow: 0 0 10px 1px #333;
   background-color: #fff; }
   @media only screen and (max-width: 750px) {
     .Modal {
-      max-width: none;
-      transform: none; } }
+      width: 80%; } }
   .Modal:before {
     display: block;
     padding: 5px;
     border-radius: 5px;
-    background-color: #fff;
-    right: 10px;
-    top: 10px;
+    background-color: #878787;
+    right: 5px;
+    top: 5px;
     position: absolute;
+    font-weight: bold;
+    color: #fff;
+    font-size: 80%;
     content: 'close'; }
   .Modal-content {
     display: none; }
@@ -457,7 +458,7 @@ button {
   float: left;
   margin: 0 15px 0 0;
   width: 40%;
-  max-width: 400px; }
+  max-width: 350px; }
   @media only screen and (max-width: 750px) {
     .AdvisoryBoardFull-img {
       display: block;

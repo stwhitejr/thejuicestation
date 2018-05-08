@@ -18,6 +18,7 @@
         $query_menu_items = $db->query('
           SELECT * FROM tblMenuItems as mi
           INNER JOIN tblMenuCategories as mc on mi.MiCatID = mc.CatID
+          ORDER BY mi.MiID ASC
           ');
       } catch(Exception $e) {
         error_log($e);

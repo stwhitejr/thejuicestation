@@ -1,25 +1,27 @@
-<div class="Menu">
-  {{# menu }}
-  <section class="Menu-cat">
-    <h1 class="Menu-catHeader">{{ category }}</h1>
-    {{#show_price_by_size}}
-      <h5 class="Menu-catPriceBySize">
-        {{#price_by_size_data}}
-          {{size}} ${{price}} {{^is_last}}&nbsp;-&nbsp;{{/is_last}}
-        {{/price_by_size_data}}
-      </h5>
-      {{/show_price_by_size}}
-    <div class="Menu-itemBlock">
-      {{# items }}
-      <div class="Menu-item">
-        <h2 class="u-Row--small">{{ name }}</h2>
-        {{#price}}<h6 class="u-Row--small">${{ price }}</h6>{{/price}}
-        <p>
-          {{ ingredients }}
-        </p>
+<div class="MenuWrap">
+  <div class="Menu">
+    {{# menu }}
+    <section class="Menu-cat">
+      <h1 class="Menu-catHeader">{{ category }}</h1>
+      {{#show_price_by_size}}
+        <h5 class="Menu-catPriceBySize">
+          {{#price_by_size_data}}
+            {{size}} ${{price}} {{^is_last}}&nbsp;-&nbsp;{{/is_last}}
+          {{/price_by_size_data}}
+        </h5>
+        {{/show_price_by_size}}
+      <div class="Menu-itemBlock">
+        {{# items }}
+        <div class="Menu-item">
+          <h2>{{ name }}</h2>
+          {{#price}}<h5>${{ price }}</h5>{{/price}}
+          <p>
+            {{ ingredients }}
+          </p>
+        </div>
+        {{/ items }}
       </div>
-      {{/ items }}
-    </div>
-  </section>
-  {{/ menu}}
+    </section>
+    {{/ menu}}
+  </div>
 </div>
