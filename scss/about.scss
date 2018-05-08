@@ -55,13 +55,13 @@
   }
 }
 .AdvisoryBoard {
-  padding: 0 $spacing--medium $spacing--xlarge;
+  padding: 40px $spacing--medium $spacing--xlarge;
   background-image: url('../images/splash_bg_light_top.gif'), url('../images/splash_bg_light_mid.gif');
   background-position: left top, left center;
   background-repeat: no-repeat, repeat-y;
   background-size: 100%;
   @media only screen and (max-width:$bp--medium) {
-    padding: 0 $spacing--small $spacing--large;
+    padding: $spacing--medium $spacing--small $spacing--large 0;
   }
   &-content,
   &-readMore {
@@ -73,15 +73,32 @@
   &-img {
     width: 100%;
     max-width: 400px;
+    @media only screen and (max-width:$bp--medium) {
+      max-width: 200px;
+    }
   }
   &-readMore {
     font-weight: bold;
   }
   &-col {
     padding: 20px;
-    @media only screen and (max-width:$bp--small) {
+    @media only screen and (max-width:$bp--large) {
       padding: 15px;
     }
   }
 }
-//@TODO add better styling for modal
+.AdvisoryBoardFull {
+  &-img {
+    float: left;
+    margin: 0 15px 0 0;
+    width: 40%;
+    max-width: 400px;
+    @media only screen and (max-width:$bp--medium) {
+      display: block;
+      max-width: 200px;
+    }
+  }
+  &-content {
+    margin-bottom: $spacing--medium;
+  }
+}

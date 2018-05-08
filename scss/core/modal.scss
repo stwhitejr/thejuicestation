@@ -14,16 +14,17 @@
 }
 .Modal {
   padding: $spacing--large;
-  margin: $spacing--large;
-  position: fixed;
-  top: 100px; // Clear mobile header
+  margin: $spacing--large 0;
+  position: absolute;
   border-radius: 10px;
-  border: solid 5px $color--dark;
+  border: solid 5px $color--medium;
   max-width: 70%;
-  box-shadow: 0 0 10px 0 $color--medium;
+  transform: translateX(15%);
+  box-shadow: 0 0 10px 1px #333;
   background-color: $color--white;
   @media only screen and (max-width:$bp--medium) {
     max-width: none;
+    transform: none;
   }
   // Close button
   &:before {

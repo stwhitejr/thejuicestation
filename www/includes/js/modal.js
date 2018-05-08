@@ -1,8 +1,11 @@
 // Modal
 var modalItems = document.querySelectorAll('.js-modal-open');
-var modalWrap = document.querySelector('.js-modal');
+var modalWrap = document.querySelector('.js-modal-wrap');
+var modal = document.querySelector('.js-modal');
 var id;
 function toggleModal() {
+  // Set modal position relative to window scroll position
+  modal.style.top = window.pageYOffset + 'px';
   id = this.getAttribute('data-modal-id') ? this.getAttribute('data-modal-id') : id;
   var modalContent = document.querySelectorAll('.js-modal-content');
 

@@ -16,9 +16,12 @@
     left: 0;
     right: 0;
     content: '';
+    z-index: 0;
   }
   &-cat {
     padding: $spacing--medium 0;
+    z-index: 1;
+    position: relative;
   }
   &-catHeader {
     background: url('../images/splash_green.png') repeat-y;
@@ -30,13 +33,19 @@
       margin: 0 auto;
     }
   }
-  &-item {
-    float: left;
-    width: 46%;
-    padding: 2%;
+  &-catPriceBySize {
+    margin: $spacing--small $spacing--small 0;
+  }
+  &-itemBlock {
+    column-count: 2;
+    padding: $spacing--small;
     @media only screen and (max-width:$bp--small) {
-      float: none;
-      width: 96%;
+      column-count: 1;
     }
+  }
+  &-item {
+    padding: 2%;
+    width: 96%;
+    display: inline-block;
   }
 }

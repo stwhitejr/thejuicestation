@@ -133,7 +133,8 @@ body {
   background-color: #414246;
   font-family: "Open Sans", arial, sans-serif;
   font-weight: 300;
-  font-size: 22px; }
+  font-size: 22px;
+  position: relative; }
   @media only screen and (max-width: 1119px) {
     body {
       font-size: 18px; } }
@@ -144,14 +145,14 @@ body {
     body {
       font-size: 16px; } }
 
-p, h1, h2, h3, h4 {
+p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 300; }
 
 p {
   line-height: 1.5em; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "SinaNova", times new roman, serif; }
 
 h1 {
@@ -165,6 +166,12 @@ h3 {
 
 h4 {
   font-size: 120%; }
+
+h5 {
+  font-size: 100%; }
+
+h6 {
+  font-size: 80%; }
 
 strong {
   font-weight: 400; }

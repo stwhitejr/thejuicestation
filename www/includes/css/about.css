@@ -104,7 +104,8 @@ body {
   background-color: #414246;
   font-family: "Open Sans", arial, sans-serif;
   font-weight: 300;
-  font-size: 22px; }
+  font-size: 22px;
+  position: relative; }
   @media only screen and (max-width: 1119px) {
     body {
       font-size: 18px; } }
@@ -115,14 +116,14 @@ body {
     body {
       font-size: 16px; } }
 
-p, h1, h2, h3, h4 {
+p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 300; }
 
 p {
   line-height: 1.5em; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "SinaNova", times new roman, serif; }
 
 h1 {
@@ -136,6 +137,12 @@ h3 {
 
 h4 {
   font-size: 120%; }
+
+h5 {
+  font-size: 100%; }
+
+h6 {
+  font-size: 80%; }
 
 strong {
   font-weight: 400; }
@@ -336,6 +343,47 @@ button {
     padding: 10px;
     font-size: 80%; }
 
+.ModalWrap {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba(33, 33, 38, 0.5);
+  cursor: pointer; }
+  .ModalWrap--active {
+    display: block; }
+
+.Modal {
+  padding: 30px;
+  margin: 30px 0;
+  position: absolute;
+  border-radius: 10px;
+  border: solid 5px #878787;
+  max-width: 70%;
+  transform: translateX(15%);
+  box-shadow: 0 0 10px 1px #333;
+  background-color: #fff; }
+  @media only screen and (max-width: 750px) {
+    .Modal {
+      max-width: none;
+      transform: none; } }
+  .Modal:before {
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    content: 'close'; }
+  .Modal-content {
+    display: none; }
+    .Modal-content--active {
+      display: block; }
+
 .Hero {
   min-height: 440px;
   background: url("../images/about/hero.jpg") center center;
@@ -379,85 +427,43 @@ button {
     font-style: italic; }
 
 .AdvisoryBoard {
-  padding: 0 20px 50px;
+  padding: 40px 20px 50px;
   background-image: url("../images/splash_bg_light_top.gif"), url("../images/splash_bg_light_mid.gif");
   background-position: left top, left center;
   background-repeat: no-repeat, repeat-y;
   background-size: 100%; }
   @media only screen and (max-width: 750px) {
     .AdvisoryBoard {
-      padding: 0 10px 30px; } }
+      padding: 20px 10px 30px 0; } }
   .AdvisoryBoard-content, .AdvisoryBoard-readMore {
     font-size: 80%; }
   .AdvisoryBoard-content {
     margin-bottom: 10px; }
-  .AdvisoryBoard-content--hidden {
-    display: none; }
   .AdvisoryBoard-img {
     width: 100%;
     max-width: 400px; }
+    @media only screen and (max-width: 750px) {
+      .AdvisoryBoard-img {
+        max-width: 200px; } }
   .AdvisoryBoard-readMore {
     font-weight: bold; }
   .AdvisoryBoard-col {
-    padding: 20px;
-    transition: .3s; }
-    @media only screen and (max-width: 600px) {
+    padding: 20px; }
+    @media only screen and (max-width: 1119px) {
       .AdvisoryBoard-col {
         padding: 15px; } }
-    .AdvisoryBoard-col--hidden {
-      opacity: .3; }
-    .AdvisoryBoard-col--expand {
-      position: absolute;
-      left: 20px;
-      right: 20px;
-      z-index: 1;
-      background-color: #e5e8ee;
-      box-shadow: 0 0 10px 0 #878787; }
-      .AdvisoryBoard-col--expand .AdvisoryBoard-img {
-        float: left;
-        margin-right: 20px; }
-        @media only screen and (max-width: 750px) {
-          .AdvisoryBoard-col--expand .AdvisoryBoard-img {
-            max-width: 200px; } }
-      .AdvisoryBoard-col--expand .AdvisoryBoard-content--hidden {
-        display: block; }
-      .AdvisoryBoard-col--expand .AdvisoryBoard-wrap {
-        float: left; }
+
+.AdvisoryBoardFull-img {
+  float: left;
+  margin: 0 15px 0 0;
+  width: 40%;
+  max-width: 400px; }
+  @media only screen and (max-width: 750px) {
+    .AdvisoryBoardFull-img {
+      display: block;
+      max-width: 200px; } }
+
+.AdvisoryBoardFull-content {
+  margin-bottom: 20px; }
 
 /*# sourceMappingURL=about.css.map */
-
-.ModalWrap {
-  position: absolute;
-  display: none;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, .5);
-}
-  .ModalWrap--active {
-    display: block;
-  }
-
-.Modal {
-  padding: 20px;
-  margin: 20px;
-  position: fixed;
-  border-radius: 10px;
-  box-shadow: 0 0 10px 0 #ddd;
-  background-color: #fff;
-}
-  .Modal:before {
-    display: block;
-    right: 10px;
-    top: 10px;
-    position: absolute;
-    content: 'close';
-  }
-  .Modal-content {
-    display: none;
-  }
-    .Modal-content--active {
-      display: block;
-    }

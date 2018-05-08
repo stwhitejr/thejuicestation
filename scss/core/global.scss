@@ -198,14 +198,14 @@ body {
     font-size: $fontsize--smallbase;
   }
 }
-p, h1, h2, h3, h4 {
+p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 300;
 }
 p {
   line-height: 1.5em;
 }
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: $font--primary;
 }
 h1 {
@@ -219,6 +219,12 @@ h3 {
 }
 h4 {
   font-size: $fontsize--medium;
+}
+h5 {
+  font-size: $fontsize--reset;
+}
+h6 {
+  font-size: $fontsize--small;
 }
 strong {
   font-weight: 400;

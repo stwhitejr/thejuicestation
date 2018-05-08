@@ -84,7 +84,8 @@ body {
   background-color: #414246;
   font-family: "Open Sans", arial, sans-serif;
   font-weight: 300;
-  font-size: 22px; }
+  font-size: 22px;
+  position: relative; }
   @media only screen and (max-width: 1119px) {
     body {
       font-size: 18px; } }
@@ -95,14 +96,14 @@ body {
     body {
       font-size: 16px; } }
 
-p, h1, h2, h3, h4 {
+p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 300; }
 
 p {
   line-height: 1.5em; }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "SinaNova", times new roman, serif; }
 
 h1 {
@@ -116,6 +117,12 @@ h3 {
 
 h4 {
   font-size: 120%; }
+
+h5 {
+  font-size: 100%; }
+
+h6 {
+  font-size: 80%; }
 
 strong {
   font-weight: 400; }
@@ -329,9 +336,12 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    content: ''; }
+    content: '';
+    z-index: 0; }
   .Menu-cat {
-    padding: 20px 0; }
+    padding: 20px 0;
+    z-index: 1;
+    position: relative; }
   .Menu-catHeader {
     background: url("../images/splash_green.png") repeat-y;
     line-height: 140%;
@@ -341,13 +351,17 @@ button {
     @media only screen and (max-width: 600px) {
       .Menu-catHeader {
         margin: 0 auto; } }
-  .Menu-item {
-    float: left;
-    width: 46%;
-    padding: 2%; }
+  .Menu-catPriceBySize {
+    margin: 10px 10px 0; }
+  .Menu-itemBlock {
+    column-count: 2;
+    padding: 10px; }
     @media only screen and (max-width: 600px) {
-      .Menu-item {
-        float: none;
-        width: 96%; } }
+      .Menu-itemBlock {
+        column-count: 1; } }
+  .Menu-item {
+    padding: 2%;
+    width: 96%;
+    display: inline-block; }
 
 /*# sourceMappingURL=menu.css.map */
