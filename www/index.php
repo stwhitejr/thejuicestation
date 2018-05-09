@@ -62,6 +62,7 @@
           <?=$view->page_title()?>
         </title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Pacifico" rel="stylesheet">
         <?php foreach ($view->css_files() as $css_file) {?>
           <link href="includes/css/<?=$css_file?>.css" type="text/css" rel="stylesheet" />
         <?php } ?>

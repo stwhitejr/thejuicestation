@@ -6,14 +6,14 @@
       {{#show_price_by_size}}
         <h5 class="Menu-catPriceBySize">
           {{#price_by_size_data}}
-            {{size}} ${{price}} {{^is_last}}&nbsp;-&nbsp;{{/is_last}}
+            {{size}}&nbsp;${{price}} {{^is_last}}&nbsp;-&nbsp;{{/is_last}}
           {{/price_by_size_data}}
         </h5>
         {{/show_price_by_size}}
       <div class="Menu-itemBlock">
         {{# items }}
         <div class="Menu-item">
-          <h2>{{ name }}</h2>
+          <h2 class="Menu-itemName">{{ name }}</h2>
           {{#price}}<h5>${{ price }}</h5>{{/price}}
           <p>
             {{ ingredients }}

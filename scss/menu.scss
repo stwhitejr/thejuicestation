@@ -6,17 +6,23 @@
   background: url('../images/menu/wood_grain.jpg') repeat;
   padding: 30px;
   @media only screen and (max-width:$bp--medium) {
-    padding: 20px;
+    padding: 10px;
   }
 }
 .Menu {
   background: url('../images/menu/chalkboard.jpg') repeat #000;
   color: $color--offwhite;
   padding: 20px;
+  @media only screen and (max-width:$bp--medium) {
+    padding: 10px;
+  }
   &-cat {
     padding: $spacing--medium;
     border: solid 10px $color--offwhite;
     margin-bottom: 20px;
+    @media only screen and (max-width:$bp--medium) {
+      border-width: 5px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -24,13 +30,14 @@
   &-catHeader {
     text-align: center;
     display: block;
-    margin: 10px;
     padding-bottom: 10px;
     font-size: 300%;
     border-bottom: solid 5px $color--offwhite;
+    margin-bottom: 5px;
+    text-transform: capitalize;
   }
   &-catPriceBySize {
-    margin: $spacing--small;
+    margin-top: $spacing--small;
     text-align: center;
   }
   &-itemBlock {
@@ -40,11 +47,24 @@
     @media only screen and (max-width:$bp--small) {
       column-count: 1;
       column-gap: 0;
+      padding: 0;
     }
   }
   &-item {
-    padding-bottom: 20px;
+    padding: 10px  0 15px;
     width: 100%;
     display: inline-block;
+    font-family: 'Indie Flower', cursive;
+  }
+  &-itemName {
+    margin-bottom: 5px;
+    @media only screen and (max-width:$bp--small) {
+      margin-bottom: 0;
+    }
+  }
+  &-itemName,
+  &-catHeader,
+  &-catPriceBySize {
+    font-family: 'Pacifico', cursive;
   }
 }
