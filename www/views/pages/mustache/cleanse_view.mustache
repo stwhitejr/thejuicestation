@@ -9,55 +9,78 @@
   </div>
 </section>
 <section class="CleanseContent">
-  <div class="CleanseContent-item">
-    <div class="u-FlexBox u-NoMobileFlex">
-      <div class="u-Col">
-        <h2 class="u-Row--small">the first cleanse</h2>
-        <p class="u-Row--small">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero architecto mollitia cupiditate ipsam! Velit, commodi. Corporis, laborum accusantium. Nihil quo tempora possimus non fugiat repellendus similique nostrum dolores explicabo consectetur.
-        </p>
-        <div>
-          <strong>$60.00</strong>
-          <a href="#" class="CleanseContent-cta">buy now</a>
+  {{#cleanses}}
+    <div class="CleanseContent-item">
+      <div class="u-FlexBox u-NoMobileFlex u-FlexCenter">
+        <div class="u-Col">
+          <h2>{{name}}</h2>
+          <div class="u-Strong u-Row--medium">${{price}} a week</div>
+          {{#items}}
+            <h5>{{name}}</h5>
+            <p class="CleanseContent-ingredients">
+              {{ingredients}}
+            </p>
+          {{/items}}
+        </div>
+        <div class="u-Col">
+          <img src="includes/images/cleanse/temp.jpg" class="CleanseContent-img" alt="" />
         </div>
       </div>
-      <div class="u-Col u-ColMargin">
-        <img src="includes/images/cleanse/temp.jpg" class="CleanseContent-img" alt="" />
-      </div>
     </div>
-  </div>
-  <div class="CleanseContent-item">
-    <div class="u-FlexBox u-NoMobileFlex">
-      <div class="u-Col">
-        <h2 class="u-Row--small">the first cleanse</h2>
-        <p class="u-Row--small">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero architecto mollitia cupiditate ipsam! Velit, commodi. Corporis, laborum accusantium. Nihil quo tempora possimus non fugiat repellendus similique nostrum dolores explicabo consectetur.
-        </p>
-        <div>
-          <strong>$60.00</strong>
-          <a href="#" class="CleanseContent-cta">buy now</a>
-        </div>
-      </div>
-      <div class="u-Col u-ColMargin">
-        <img src="includes/images/cleanse/temp.jpg" class="CleanseContent-img" alt="" />
-      </div>
+  {{/cleanses}}
+  <section>
+    <h2 class="u-Row--medium">Cleanse Frequently Asked Questions</h2>
+    <h4>Why Cleanse?</h4>
+    <p class="CleanseContent-faqAnswer">
+      A cleanse is a great way to ignite the natural healing force within. Cleansing has so many benefits. It's a way to recharge, rejuvenate, and renew your body. It is also a great way to help your body remove toxins.
+    </p>
+    <h4>What is a toxin?</h4>
+    <p class="CleanseContent-faqAnswer">
+      A toxin is any substance that is harmful to your body. There are many different types of toxins and they can be absorbed from numerous sources, including through food, water, and air.
+    </p>
+    <h4>What is detoxification?</h4>
+    <p class="CleanseContent-faqAnswer">
+      Detoxification simply means to decrease or remove toxic substances and waste from our bodies.
+    </p>
+    <h4>Doesn't our body detox naturally? If so, why cleanse?</h4>
+    <div class="CleanseContent-faqAnswer">
+      <p class="u-Row--medium">
+        Our bodies detoxify on a regular basis through metabolism. This body response converts compounds into less toxic compounds which can be excreted from our body through natural ways (sweating, urinating, etc). There are many factors that can weaken the body's ability to function as intended. In these cases, the detoxification mechanisms in the body are not able to thoroughly cleanse the tissues and organs, and therefore the body is not able to maintain balance.
+      </p>
+      <p class="u-Row--medium">
+        A detoxification procedure can help the body to cleanse and balance itself. You have a built in doctor within your body, and sometimes, for several reasons, it just needs a little help to perform the miraculous way it was intended to.
+      </p>
+      <p>
+        Hippocrates said, "Everyone has a doctor in him or her, we just have to help it in its work. The natural healing force within each of us is the greatest force in getting well."
+      </p>
     </div>
-  </div>
-  <div class="CleanseContent-item">
-    <div class="u-FlexBox u-NoMobileFlex">
-      <div class="u-Col">
-        <h2 class="u-Row--small">the first cleanse</h2>
-        <p class="u-Row--small">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero architecto mollitia cupiditate ipsam! Velit, commodi. Corporis, laborum accusantium. Nihil quo tempora possimus non fugiat repellendus similique nostrum dolores explicabo consectetur.
-        </p>
-        <div>
-          <strong>$60.00</strong>
-          <a href="#" class="CleanseContent-cta">buy now</a>
-        </div>
-      </div>
-      <div class="u-Col u-ColMargin">
-        <img src="includes/images/cleanse/temp.jpg" class="CleanseContent-img" alt="" />
-      </div>
+    <h4>When is the right time to cleanse?</h4>
+    <p class="CleanseContent-faqAnswer">
+      You may hear that the right time to start a cleanse is during seasonal changes, or when you are feeling lethargic and congested. However, the right time to start a cleanse is anytime you are ready! Like everything else, when you are ready for a change you are most likely to succeed at making that change.
+    </p>
+    <h4>Is it okay to exercise while I cleanse?</h4>
+    <p class="CleanseContent-faqAnswer">
+      It is okay to lightly exercise during a cleanse, but do not engage in vigorous exercises. Listen to your body. It may need rest during a cleanse. Respond to your energy levels. Walking, yoga, and other light exercises are appropriate. Exercise does help to flush out some of those toxins and helps to release stress and calm the mind.
+    </p>
+    <h4>How can I best prepare?</h4>
+    <p class="CleanseContent-faqAnswer">
+      Avoiding alcohol, caffeine, processed foods, and sugar is a great way to prepare yourself for a cleanse as well as a great life choice.
+    </p>
+    <h4>Should I inform my doctor before starting a cleanse?</h4>
+    <p class="CleanseContent-faqAnswer">
+      You should always seek advice from your doctor or a qualified practitioner before starting any new program.
+    </p>
+    <h4>Will I experience side effects from a cleanse?</h4>
+    <div class="CleanseContent-faqAnswer">
+      <p class="u-Row--medium">
+        Often, the bodies' routine to release toxins may cause a strong smelling odor, lethargy, a coated tongue, constipation, loose stools, or gas. Other signs that the detox is working may be slight nausea, headaches, and skin or sinus problems. Symptoms should be mild and not overwhelming. If they worsen or persist, seek advice from your doctor.
+      </p>
+      <p>
+        Cleansing can start slow and build in time as you get comfortable with your bodies process. The Juice Station offers several different levels of cleansing and can be customized to meet your preferences.
+      </p>
     </div>
-  </div>
+    <p class="CleanseContent-faqDisclaimer">
+      Disclaimer: This information is intended for educational purposes only and is not a substitute for advice, diagnosis, or treatment by a licensed physician. It is not meant to cover all possible precautions, drug interactions, circumstances, or adverse effects. You should seek prompt medical care for any health issues and consult your doctor before making a change to your regimen.
+    </p>
+  </section>
 </section>

@@ -1,6 +1,9 @@
 <?php
   // Constants
   const CONTROLLER_ID_PAGES = 01;
+
+  $is_prod = isset($_GET['prod']);
+  $is_dev = false;
   // Check if localhost
   if ($_SERVER['REMOTE_ADDR'] === '127.0.0.1') {
     error_reporting(E_ALL);
@@ -49,7 +52,7 @@
   // Only return the base HTML if this isn't an ajax request
   if (!$view->is_ajax) {
     //@TODO Remove this
-    if (!$is_dev && $action === 'home') {
+    if (!$is_dev && $action === 'home' && !$is_prod) {
       require_once('coming_soon.php');
     } else {
 ?>
@@ -140,7 +143,9 @@
                     <a href="https://www.instagram.com/thejuicestationma/" target="_blank"><img src="includes/images/instagram.svg" class="Footer-socialIcon" /></a>
                   </div>
                   <div class="u-Col--medium u-ColMargin">
-                    <a href="https://www.instagram.com/thejuicestationma/" target="_blank"><img src="<?=$view->get_instagram_image_url()?>" class="Footer-instagramThumb" /></a>
+                    <a href="https://www.instagram.com/thejuicestationma/" target="_blank">
+                      <img src="<?=$view->get_instagram_image()?>" class="Footer-instagramThumb" />
+                    </a>
                   </div>
                 </div>
               </section>

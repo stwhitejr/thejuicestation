@@ -108,6 +108,9 @@ $bp--small: 600px;
     }
   }
 }
+.u-FlexCenter {
+  align-items: center;
+}
 .u-Col {
   flex: 1;
 }
@@ -227,7 +230,8 @@ h5 {
 h6 {
   font-size: $fontsize--small;
 }
-strong {
+strong,
+.u-Strong {
   font-weight: 400;
 }
 a {

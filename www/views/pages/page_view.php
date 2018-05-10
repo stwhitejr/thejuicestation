@@ -64,8 +64,8 @@
      *
      * @return string
      */
-    public function get_instagram_image_url() {
-      return $this->model->instagram_image_url;
+    public function get_instagram_image() {
+      return $this->model->instagram_image;
     }
 
     /**

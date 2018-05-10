@@ -8,6 +8,7 @@
     public $menu;
 
     function __construct() {
+      parent::__construct();
     }
 
     function get_menu_items() {
@@ -67,7 +68,7 @@
           $results_price_by_size = $query_price_by_size->fetchAll();
           $i = 1;
           foreach ($results_price_by_size as $key => $row) {
-            $is_last;
+            $is_last = false;
             if (count($results_price_by_size) === ($i)) {
               $is_last = true;
             }

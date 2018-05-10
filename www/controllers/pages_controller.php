@@ -8,8 +8,11 @@
   CONST PAGE_ID_LOCATION         = 06;
   CONST PAGE_ID_BLOG             = 07;
 
+  // Includes
   require_once('models/pages_model.php');
   require_once('models/menu_model.php');
+  require_once('models/cleanse_model.php');
+
   class Pages_Controller {
 
     public $id = CONTROLLER_ID_PAGES;
@@ -26,7 +29,7 @@
       require_once('views/pages/home_view.php');
       $this->page_model = new Pages_Model();
       $this->page_id = PAGE_ID_HOME;
-      $this->page_model->page_title = 'The Juice Station';
+      $this->page_model->page_title = 'Juice Bar in Pembroke, Massachusetts - The Juice Station - Smoothies, Shots, Cleanses - South Shore Healthy Eats';
       $this->page_model->css_files = ['home'];
       if (isset($_GET['email_signup'])) {
         $this->page_model->email_signup($_GET['email_signup']);
@@ -43,7 +46,7 @@
       require_once('views/pages/about_view.php');
       $this->page_model = new Pages_Model();
       $this->page_model->page_id = PAGE_ID_ABOUT;
-      $this->page_model->page_title = 'The Juice Station';
+      $this->page_model->page_title = 'The Juice Station South Shore Massachusetts';
       $this->page_model->css_files = ['about'];
       $this->page_model->js_files = ['modal'];
       $this->view = new About_View($this->page_model);
@@ -58,7 +61,7 @@
       require_once('views/pages/menu_view.php');
       $this->page_model = new Menu_Model();
       $this->page_model->page_id = PAGE_ID_MENU;
-      $this->page_model->page_title = 'The Juice Station';
+      $this->page_model->page_title = 'Juice Bar Menu South Shore Massachusetts - The Juice Station - Smoothies, Bowls, Juice, Coffee';
       $this->page_model->css_files = ['menu'];
       $this->page_model->get_menu_items();
       $this->view = new Menu_View($this->page_model);
@@ -71,10 +74,11 @@
      */
     public function cleanses() {
       require_once('views/pages/cleanses_view.php');
-      $this->page_model = new Pages_Model();
+      $this->page_model = new Cleanse_Model();
       $this->page_model->page_id = PAGE_ID_CLEANSES;
-      $this->page_model->page_title = 'The Juice Station';
+      $this->page_model->page_title = 'Juice Cleanse South Shore Massachusetts - The Juice Station - Detox Program';
       $this->page_model->css_files = ['cleanses'];
+      $this->page_model->get_cleanse_items();
       $this->view = new Cleanses_View($this->page_model);
     }
 
@@ -87,7 +91,7 @@
       require_once('views/pages/deliveries_view.php');
       $this->page_model = new Pages_Model();
       $this->page_model->page_id = PAGE_ID_DELIVERY_SERVICE;
-      $this->page_model->page_title = 'The Juice Station';
+      $this->page_model->page_title = 'Juice & Cleanse Delivery Service - The Juice Station - Pembroke, Massachusetts';
       $this->page_model->css_files = ['deliveries'];
       $this->page_model->js_files = ['deliveries'];
       if (isset($_POST['delivery_request'])) {

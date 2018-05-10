@@ -1,32 +1,3 @@
-.CleanseContent-cta {
-  padding: 5px 10px;
-  display: inline-block;
-  text-align: center;
-  opacity: .8;
-  transition: .2s; }
-  @media only screen and (max-width: 600px) {
-    .CleanseContent-cta {
-      opacity: 1; } }
-  .CleanseContent-cta:after {
-    content: '';
-    display: inline-block;
-    margin-left: 10px;
-    border-top: 7px solid transparent;
-    border-left: 9px solid #fff;
-    border-bottom: 7px solid transparent; }
-    @media only screen and (max-width: 1119px) {
-      .CleanseContent-cta:after {
-        border-top-width: 6px;
-        border-bottom-width: 6px;
-        border-left-width: 8px; } }
-    @media only screen and (max-width: 600px) {
-      .CleanseContent-cta:after {
-        border-top-width: 5px;
-        border-bottom-width: 5px;
-        border-left-width: 7px; } }
-  .CleanseContent-cta:hover {
-    opacity: 1; }
-
 .Hero-contentBox {
   width: 550px;
   border-radius: 100%; }
@@ -55,6 +26,9 @@
     display: block; }
     .u-NoMobileFlex > .u-ColMargin {
       margin-left: 0; } }
+
+.u-FlexCenter {
+  align-items: center; }
 
 .u-Col {
   flex: 1; }
@@ -173,7 +147,8 @@ h5 {
 h6 {
   font-size: 80%; }
 
-strong {
+strong,
+.u-Strong {
   font-weight: 400; }
 
 a {
@@ -417,29 +392,15 @@ button {
       .CleanseContent-img {
         margin: 20px 0 0;
         width: 100%; } }
-
-.CleanseContent {
-  padding: 70px; }
-  @media only screen and (max-width: 750px) {
-    .CleanseContent {
-      padding: 30px; } }
-  .CleanseContent-item {
-    padding-bottom: 30px;
+  .CleanseContent-ingredients {
+    font-size: 80%;
+    margin-bottom: 15px; }
+  .CleanseContent-faqAnswer {
     margin-bottom: 30px;
-    border-bottom: solid 1px #e5e8ee; }
-    .CleanseContent-item:last-child {
-      border: 0; }
-  .CleanseContent-img {
-    width: 90%;
-    display: block;
-    margin: 0 auto; }
-    @media only screen and (max-width: 750px) {
-      .CleanseContent-img {
-        margin: 20px 0 0;
-        width: 100%; } }
-  .CleanseContent-cta {
-    background-color: #f0a861;
-    color: #fff;
-    margin-left: 10px; }
+    padding-bottom: 30px;
+    border-bottom: dotted 3px #e5e8ee; }
+  .CleanseContent-faqDisclaimer {
+    font-size: 70%;
+    font-style: italic; }
 
 /*# sourceMappingURL=cleanses.css.map */

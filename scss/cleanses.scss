@@ -57,33 +57,17 @@
       width: 100%;
     }
   }
-}
-.CleanseContent {
-  padding: $spacing--xxlarge;
-  @media only screen and (max-width:$bp--medium) {
-    padding: $spacing--large;
+  &-ingredients {
+    font-size: $fontsize--small;
+    margin-bottom: 15px;
   }
-  &-item {
-    padding-bottom: $spacing--large;
+  &-faqAnswer {
     margin-bottom: $spacing--large;
-    border-bottom: solid 1px $color--light;
-    &:last-child {
-      border: 0;
-    }
+    padding-bottom: $spacing--large;
+    border-bottom: dotted 3px $color--light;
   }
-  &-img {
-    width: 90%;
-    display: block;
-    margin: 0 auto;
-    @media only screen and (max-width:$bp--medium) {
-      margin: $spacing--medium 0 0;
-      width: 100%;
-    }
-  }
-  &-cta {
-    @extend %button;
-    background-color: $color--orange;
-    color: $color--white;
-    margin-left: 10px;
+  &-faqDisclaimer {
+    font-size: $fontsize--xsmall;
+    font-style: italic;
   }
 }

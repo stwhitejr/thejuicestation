@@ -27,6 +27,9 @@
     .u-NoMobileFlex > .u-ColMargin {
       margin-left: 0; } }
 
+.u-FlexCenter {
+  align-items: center; }
+
 .u-Col {
   flex: 1; }
 
@@ -144,7 +147,8 @@ h5 {
 h6 {
   font-size: 80%; }
 
-strong {
+strong,
+.u-Strong {
   font-weight: 400; }
 
 a {
