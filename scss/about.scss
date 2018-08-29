@@ -55,8 +55,8 @@
   }
 }
 .AdvisoryBoard {
-  padding: 40px $spacing--medium $spacing--xlarge;
-  background-image: url('../images/splash_bg_light_top.gif'), url('../images/splash_bg_light_mid.gif');
+  padding: 60px $spacing--medium $spacing--xlarge;
+  background-image: url('../images/splash_bg_light_top.png'), url('../images/splash_bg_light_mid.gif');
   background-position: left top, left center;
   background-repeat: no-repeat, repeat-y;
   background-size: 100%;
@@ -73,7 +73,7 @@
   &-img {
     width: 100%;
     max-width: 400px;
-    @media only screen and (max-width:$bp--medium) {
+    @media only screen and (max-width:$bp--small) {
       max-width: 200px;
     }
   }

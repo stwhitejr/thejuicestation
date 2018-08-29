@@ -28,7 +28,7 @@
     public function home() {
       require_once('views/pages/home_view.php');
       $this->page_model = new Pages_Model();
-      $this->page_id = PAGE_ID_HOME;
+      $this->page_model->page_id = PAGE_ID_HOME;
       $this->page_model->page_title = 'Juice Bar in Pembroke, Massachusetts - The Juice Station - Smoothies, Shots, Cleanses - South Shore Healthy Eats';
       $this->page_model->css_files = ['home'];
       if (isset($_GET['email_signup'])) {
